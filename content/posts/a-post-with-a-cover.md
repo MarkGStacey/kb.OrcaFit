@@ -5,6 +5,7 @@ published: true
 tags:
   - Markdown
   - Cover Image
+  - Exercise
 cover_image: ''
 description: >-
   Markdown is intended to be as easy-to-read and easy-to-write as is feasible.
