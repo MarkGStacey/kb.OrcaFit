@@ -1,6 +1,7 @@
 ---
 date: 
 author: mgs
+published: true
 title: Single leg seated rotations
 description: 
 summary: 
@@ -19,5 +20,5 @@ tags:
 ### Links
 ### Studies
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQ2OTk0NzUxXX0=
+eyJoaXN0b3J5IjpbOTM2ODk5NjkzLDM0Njk5NDc1MV19
 -->
