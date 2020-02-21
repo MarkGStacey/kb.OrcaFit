@@ -27,7 +27,13 @@ module.exports = {
             create: true
           }
         }
-      }
+      },
+      {
+        use: `gridsome-plugin-netlify-cms`,
+        options: {
+          publicPath: `/admin`
+        }
+      },
     }
   ],
 
