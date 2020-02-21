@@ -9,7 +9,7 @@ author: mgs
 description: >-
  Adductor band exercise
 equipment:
--	bands
+ - bands
 ---
 # Adductor standing band pull
 ### Muscles
