@@ -1,6 +1,7 @@
 ---
 date: 2020-02-19
 author: mgs
+published: true
 title: Skater squat
 description: Single leg squat
 summary: 
@@ -25,5 +26,5 @@ Watch for feet leading out (or in), or rolling
 ### Links
 ### Studies
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzExMjc1MzIxXX0=
+eyJoaXN0b3J5IjpbLTE2NjgwMjQ1MzMsMzExMjc1MzIxXX0=
 -->

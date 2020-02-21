@@ -1,6 +1,7 @@
 ---
 date: 2020-01-09
 author: mgs
+published: true
 title: Single leg RDL
 description: 
 summary: 
@@ -27,5 +28,6 @@ Slowly lean forward, extending the weighted hand to be below your shoulder, whil
 ### Links
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODI0NTczNDFdfQ==
+eyJoaXN0b3J5IjpbLTExNTcwNTQ4MzUsLTIwODI0NTczNDFdfQ
+==
 -->
