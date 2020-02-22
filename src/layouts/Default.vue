@@ -6,7 +6,32 @@
         <Logo v-if="showLogo" />
       </div>
 
-      <div class="header__right">
+      <div class="header__right" data-app="true">
+        <v-menu offset-y>
+        <template v-slot:activator="{ on }">
+          <v-btn
+            color="primary"
+            v-on="on"
+            dark
+          >
+            Dropdown
+          </v-btn>
+        </template>
+        <v-list>
+          <v-list-item key="1" @click.native="console.log('')">
+            <v-list-item-title>Exercises</v-list-item-title>
+          </v-list-item>
+          <v-list-item key="2" @click.native="console.log('')">
+            <v-list-item-title>Rehab</v-list-item-title>
+          </v-list-item>
+          <!-- <v-list-item
+            v-for="(item, index) in items"
+            :key="index"
+          >
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item> -->
+        </v-list>
+      </v-menu>
         <ToggleTheme />
       </div>
     </header>
