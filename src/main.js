@@ -15,6 +15,7 @@ export default function (Vue, {appOptions,  router, head, isClient }) {
     href: 'https://fonts.googleapis.com/icon?family=Material+Icons'
   })
   
+  /// Vuetify always needs an attribute data-app for menu items
   Vue.use(Vuetify)
   appOptions.vuetify = new Vuetify({});
   // Set default layout as a global component
