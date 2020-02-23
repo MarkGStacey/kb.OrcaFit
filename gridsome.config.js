@@ -10,7 +10,8 @@ module.exports = {
 
   templates: {
     Post: '/:title',
-    Tag: '/tag/:id'
+    Tag: '/tag/:id',
+    Bodypart: '/bodypart/:id'
   },
 
   plugins: [
@@ -24,6 +25,10 @@ module.exports = {
           // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
           tags: {
             typeName: 'Tag',
+            create: true
+          },
+          bodyparts: {
+            typeName: 'Bodypart',
             create: true
           }
         }

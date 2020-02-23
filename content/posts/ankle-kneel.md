@@ -6,9 +6,11 @@ title: Ankle kneel
 description: Ankle kneel flexibility training
 summary: 
 tags: 
-- exercise
+- stretch
 - warmup
 - single leg
+bodypart:
+ - ankle joint
 ---
 ### Synonyms
 ### Equipment needed

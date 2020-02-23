@@ -6,7 +6,11 @@ title: Arnie press
 description: 
 summary: 
 tags: 
-- exercise
+- exercises
+bodyparts:
+- deltoid
+equipment:
+- dumbells
 ---
 ## Arnie Press
 ### Muscles

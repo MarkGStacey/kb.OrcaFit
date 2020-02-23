@@ -24,9 +24,6 @@
           <v-list-item key="1" @click.native="console.log('')">
             <v-list-item-title>Exercises</v-list-item-title>
           </v-list-item>
-          <v-list-item key="3" @click.native="console.log('')">
-            <v-list-item-title>Exercise by body part</v-list-item-title>
-          </v-list-item>
           <v-list-item key="2" @click.native="console.log('')">
             <v-list-item-title>Rehab</v-list-item-title>
           </v-list-item>
