@@ -6,25 +6,24 @@
 const collections = [
   {
     query: `{
-      allBlogPost {
+      allPost {
         edges {
           node {
             id
             title
-            slug
-            modified
+            date (format: "D. MMMM YYYY")
           }
         }
       }
-    }`,
-    transformer: ({ data }) => data.allBlogPost.edges.map(({ node }) => node),
+    }
+    `,
+    transformer: ({ data }) => data.allPost.edges.map(({ node }) => node),
     indexName: 'kb.OrcaFit', // Algolia index name
     itemFormatter: (item) => {
       return {
         objectID: item.id,
         title: item.title,
-        slug: item.slug,
-        modified: String(item.modified)
+        modified: String(item.date)
       }
     }, // optional
     matchFields: ['slug', 'modified'], // Array<String> required with PartialUpdates
@@ -59,12 +58,23 @@ module.exports = {
         }
       }
     }
+    ,
+    {
+      use: `gridsome-plugin-algolia`,
+      options: {
+        appId: 'X8QGZL1SEH',
+        apiKey: 'da245f71d8e5c4b1b9beb99e113b44bf',
+        collections,
+        chunkSize: 10000, // default: 1000
+        enablePartialUpdates: false, // default: false
+      },
+    }
     // ,
     // {
     //   use: `gridsome-plugin-algolia`,
     //   options: {
-    //     appId: process.env.X8QGZL1SEH,
-    //     apiKey: process.env.da245f71d8e5c4b1b9beb99e113b44bf,
+    //     appId: process.env.ALGOLIA_APP_ID,
+    //     apiKey: process.env.ALGOLIA_ADMIN_KEY,
     //     collections,
     //     chunkSize: 10000, // default: 1000
     //     enablePartialUpdates: true, // default: false
