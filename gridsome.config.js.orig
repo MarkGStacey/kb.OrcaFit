@@ -57,19 +57,27 @@ module.exports = {
             create: true
           }
         }
+<<<<<<< HEAD
       }
+    },
+    {
+      use: `gridsome-plugin-algolia`,
+      options: {
+        appId: process.env.X8QGZL1SEH,
+        apiKey: process.env.da245f71d8e5c4b1b9beb99e113b44bf,
+        collections,
+        chunkSize: 10000, // default: 1000
+        enablePartialUpdates: true, // default: false
+=======
+      },
+      {
+        use: `gridsome-plugin-netlify-cms`,
+        options: {
+          publicPath: `/admin`
+        }
+>>>>>>> f31d2e9f3d0ab03bc7b94553a7e825f19ca74ae6
+      },
     }
-    // ,
-    // {
-    //   use: `gridsome-plugin-algolia`,
-    //   options: {
-    //     appId: process.env.X8QGZL1SEH,
-    //     apiKey: process.env.da245f71d8e5c4b1b9beb99e113b44bf,
-    //     collections,
-    //     chunkSize: 10000, // default: 1000
-    //     enablePartialUpdates: true, // default: false
-    //   },
-    // }
   ],
 
   transformers: {
