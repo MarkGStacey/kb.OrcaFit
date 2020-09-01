@@ -2,8 +2,8 @@
 author: mgs
 date: 2019-11-12
 title: Cossack squats
-description: Cossack squats.d
-summary: Cossack squats.s
+description: Cossack squats
+summary: Cossack squats
 tags: 
 -	 exercise
 ---
@@ -18,6 +18,3 @@ tags:
 ### Cues
 ### Links
 ### Studies
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjcyMjQxMjZdfQ==
--->
