@@ -30,4 +30,5 @@ fields:
   name: bodyparts
   label: bodyparts
 pages:
+- content/posts/Html/Test.md
 - content/posts/Html/test.html
