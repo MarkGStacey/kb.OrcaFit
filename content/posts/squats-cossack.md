@@ -4,7 +4,7 @@ date: 2019-11-12
 title: Cossack squats
 description: Cossack squats
 summary: Cossack squats
-tags: 
+tags:
 - exercise
 ---
 ### Muscles
