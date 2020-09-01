@@ -5,7 +5,7 @@ title: Cossack squats
 description: Cossack squats
 summary: Cossack squats
 tags: 
--	 exercise
+- exercise
 ---
 ### Muscles
 ### Synonyms
