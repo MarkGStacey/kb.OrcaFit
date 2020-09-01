@@ -3,8 +3,8 @@ author: mgs
 title: Single Leg Squat step down
 description: 
 summary: 
-tags: 
--	 exercise
+tags:
+- exercise
 ---
 ### Muscles
 ### Synonyms
