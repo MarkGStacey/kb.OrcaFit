@@ -29,3 +29,5 @@ fields:
 - type: list
   name: bodyparts
   label: bodyparts
+pages:
+- content/posts/Html/test.html
