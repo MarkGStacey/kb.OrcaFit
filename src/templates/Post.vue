@@ -6,7 +6,7 @@
       </h1>
 
       <PostMeta :post="$page.post" />
-
+      {{$page}}
     </div>
 
     <div class="post content-box">

@@ -17,7 +17,7 @@ const collections = [
       }
     }
     `,
-    transformer: ({ data }) => data.allPost.edges.map(({ node }) => node),
+    /*transformer: ({ data }) => data.allPost.edges.map(({ node }) => node),*/
     indexName: 'kb.OrcaFit', // Algolia index name
     itemFormatter: (item) => {
       return {
@@ -83,7 +83,7 @@ module.exports = {
   ],
 
   transformers: {
-    //Add markdown support to all file-system sources
+    // Add markdown support to all file-system sources
     remark: {
       externalLinksTarget: '_blank',
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
