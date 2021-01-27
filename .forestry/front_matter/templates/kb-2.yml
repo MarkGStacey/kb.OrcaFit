@@ -1,0 +1,34 @@
+---
+label: kB 2
+hide_body: false
+fields:
+- type: datetime
+  name: date
+  label: date
+- type: text
+  name: title
+  label: title
+- type: boolean
+  name: published
+  label: published
+- type: text
+  name: summary
+  label: summary
+- type: list
+  name: tags
+  label: tags
+- type: text
+  name: author
+  label: author
+- type: text
+  name: description
+  label: description
+- type: list
+  name: equipment
+  label: equipment
+- type: list
+  name: bodyparts
+  label: bodyparts
+pages:
+- content/posts/Html/Test.md
+- content/posts/Html/test.html
