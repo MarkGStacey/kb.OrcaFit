@@ -1,12 +1,16 @@
 <template>
   <Layout>
     <div class="post-title">
-      <h1 class="post-title__text">
+      <h1 class="post-title__text text-gray-900">
         {{ $page.post.title }}
       </h1>
 
+      
+    <h1 class="mt-8 font-bold text-1xl">
+      Hello, world!
+    </h1>
+
       <PostMeta :post="$page.post" />
-      {{$page}}
     </div>
 
     <div class="post content-box">
@@ -14,7 +18,7 @@
         <g-image alt="Cover image" v-if="$page.post.cover_image" :src="$page.post.cover_image" />
       </div>
 
-      <div class="post__content" v-html="$page.post.content" />
+      <div class="post__content prose prose-sm" v-html="$page.post.content" />
 
       <div class="post__footer">
         <PostTags :post="$page.post" />
@@ -33,6 +37,7 @@
 import PostMeta from '~/components/PostMeta'
 import PostTags from '~/components/PostTags'
 import Author from '~/components/Author.vue'
+
 
 export default {
   components: {

@@ -38,8 +38,15 @@ module.exports = {
   templates: {
     Post: '/:title',
     Tag: '/tag/:id',
-    Bodypart: '/bodypart/:id'
+    Bodypart: '/bodypart/:id',
+    Program: [{
+      path: '/programs/:title',
+      component: './src/templates/Program.vue'
+    }],
     // Program: [{
+    //   path: '/programs/:id',
+    //   component: './src/templates/Program.vue'
+    // },{
     //   path: '/content/programs/:title',
     //   component: './src/templates/Program.vue'
     // }]
@@ -57,7 +64,7 @@ module.exports = {
   plugins: [
     {
       // Create posts from markdown files
-      use: '@gridsome/source-filesystem',
+      use: '@gridsome/source-filesystem',      
       options: {
         typeName: 'Post',
         path: 'content/posts/*.md',
@@ -69,6 +76,25 @@ module.exports = {
           },
           bodyparts: {
             typeName: 'Bodypart',
+            create: true
+          },
+          equipment: {
+            typeName: 'Equipment',
+            create: true
+          }
+        }
+      }
+    },
+    {
+      // Create posts from markdown files
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Program',
+        path: 'content/programs/*.md',
+        refs: {
+          // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
+          tags: {
+            typeName: 'Tag',
             create: true
           }
         }

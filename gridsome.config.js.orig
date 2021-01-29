@@ -3,28 +3,29 @@
 
 // Changes here requires a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
+const tailwind = require('tailwindcss')
+const autoprefixer = require('autoprefixer')
 const collections = [
   {
     query: `{
-      allBlogPost {
+      allPost {
         edges {
           node {
             id
             title
-            slug
-            modified
+            date (format: "D. MMMM YYYY")
           }
         }
       }
-    }`,
-    transformer: ({ data }) => data.allBlogPost.edges.map(({ node }) => node),
+    }
+    `,
+    transformer: ({ data }) => data.allPost.edges.map(({ node }) => node),
     indexName: 'kb.OrcaFit', // Algolia index name
     itemFormatter: (item) => {
       return {
         objectID: item.id,
         title: item.title,
-        slug: item.slug,
-        modified: String(item.modified)
+        modified: String(item.date)
       }
     }, // optional
     matchFields: ['slug', 'modified'], // Array<String> required with PartialUpdates
@@ -37,12 +38,37 @@ module.exports = {
   templates: {
     Post: '/:title',
     Tag: '/tag/:id',
+<<<<<<< HEAD
     Bodypart: '/bodypart/:id'
+    // Program: [{
+    //   path: '/content/programs/:title',
+    //   component: './src/templates/Program.vue'
+    // }]
+=======
+    Bodypart: '/bodypart/:id',
+    Program: [{
+      path: '/programs/:id',
+      component: './src/templates/Program.vue'
+    },{
+      path: '/content/programs/:title',
+      component: './src/templates/Program.vue'
+    }]
+>>>>>>> Test
+  },
+  css: {
+    loaderOptions: {
+      postcss: {
+        plugins: [
+          tailwind(),
+          autoprefixer()
+        ]
+      }
+    }
   },
   plugins: [
     {
       // Create posts from markdown files
-      use: '@gridsome/source-filesystem',
+      use: '@gridsome/source-filesystem',      
       options: {
         typeName: 'Post',
         path: 'content/posts/*.md',
@@ -55,33 +81,55 @@ module.exports = {
           bodyparts: {
             typeName: 'Bodypart',
             create: true
+          },
+          equipment: {
+            typeName: 'Equipment',
+            create: true
           }
         }
-<<<<<<< HEAD
       }
     },
     {
+      // Create posts from markdown files
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Program',
+        path: 'content/programs/*.md',
+        refs: {
+          // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
+          tags: {
+            typeName: 'Tag',
+            create: true
+          }
+        }
+      }
+    }
+    ,
+    {
       use: `gridsome-plugin-algolia`,
       options: {
-        appId: process.env.X8QGZL1SEH,
-        apiKey: process.env.da245f71d8e5c4b1b9beb99e113b44bf,
+        appId: 'X8QGZL1SEH',
+        apiKey: 'da245f71d8e5c4b1b9beb99e113b44bf',
         collections,
         chunkSize: 10000, // default: 1000
-        enablePartialUpdates: true, // default: false
-=======
-      },
-      {
-        use: `gridsome-plugin-netlify-cms`,
-        options: {
-          publicPath: `/admin`
-        }
->>>>>>> f31d2e9f3d0ab03bc7b94553a7e825f19ca74ae6
+        enablePartialUpdates: false, // default: false
       },
     }
+    // ,
+    // {
+    //   use: `gridsome-plugin-algolia`,
+    //   options: {
+    //     appId: process.env.ALGOLIA_APP_ID,
+    //     apiKey: process.env.ALGOLIA_ADMIN_KEY,
+    //     collections,
+    //     chunkSize: 10000, // default: 1000
+    //     enablePartialUpdates: true, // default: false
+    //   },
+    // }
   ],
 
   transformers: {
-    //Add markdown support to all file-system sources
+    // Add markdown support to all file-system sources
     remark: {
       externalLinksTarget: '_blank',
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
