@@ -3,6 +3,8 @@
 
 // Changes here requires a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
+const tailwind = require('tailwindcss')
+const autoprefixer = require('autoprefixer')
 const collections = [
   {
     query: `{
@@ -17,7 +19,7 @@ const collections = [
       }
     }
     `,
-    /*transformer: ({ data }) => data.allPost.edges.map(({ node }) => node),*/
+    transformer: ({ data }) => data.allPost.edges.map(({ node }) => node),
     indexName: 'kb.OrcaFit', // Algolia index name
     itemFormatter: (item) => {
       return {
@@ -37,6 +39,20 @@ module.exports = {
     Post: '/:title',
     Tag: '/tag/:id',
     Bodypart: '/bodypart/:id'
+    // Program: [{
+    //   path: '/content/programs/:title',
+    //   component: './src/templates/Program.vue'
+    // }]
+  },
+  css: {
+    loaderOptions: {
+      postcss: {
+        plugins: [
+          tailwind(),
+          autoprefixer()
+        ]
+      }
+    }
   },
   plugins: [
     {
