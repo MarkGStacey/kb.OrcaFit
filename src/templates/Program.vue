@@ -5,11 +5,6 @@
         {{ $page.post.title }}
       </h1>
 
-      
-    <h1 class="mt-8 font-bold text-1xl">
-      Hello, world!
-    </h1>
-
       <PostMeta :post="$page.post" />
     </div>
 
@@ -61,7 +56,7 @@ export default {
 
 <page-query>
 query Post ($id: ID!) {
-  post: post (id: $id) {
+  post: program (id: $id) {
     title
     path
     date (format: "D. MMMM YYYY")

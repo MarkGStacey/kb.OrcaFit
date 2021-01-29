@@ -2,20 +2,18 @@
   <Layout :show-logo="true">
     <!-- Author intro -->
     <Author :show-title="true" />
-    <div>
-      <g-link :to="'Programs'">Programs</g-link>
-    </div>
+
     <!-- List posts -->
     <div class="posts">
-      <PostCard v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node"/>
-      <Pager :info="$page.posts.pageInfo"/>
+      <PostCard v-for="edge in $page.programs.edges" :key="edge.node.id" :post="edge.node"/>
+      <Pager :info="$page.programs.pageInfo"/>
     </div>
 
   </Layout>
 </template>
 <page-query>
 query ($page: Int) {
-  posts: allPost(perPage: 10, page: $page, sortBy: "title", order: ASC, filter: { published: { eq: true }})
+  programs: allProgram(perPage: 10, page: $page, sortBy: "title", order: ASC, filter: { published: { eq: true }})
      @paginate {
       pageInfo {
         totalPages
@@ -29,7 +27,7 @@ query ($page: Int) {
           timeToRead
           description
           cover_image (width: 770, height: 380, blur: 10)
-          ...on Post {
+          ...on Program {
           id
           title
           path

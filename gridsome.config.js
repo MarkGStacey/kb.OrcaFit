@@ -3,6 +3,8 @@
 
 // Changes here requires a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
+const tailwind = require('tailwindcss')
+const autoprefixer = require('autoprefixer')
 const collections = [
   {
     query: `{
@@ -17,7 +19,7 @@ const collections = [
       }
     }
     `,
-    /*transformer: ({ data }) => data.allPost.edges.map(({ node }) => node),*/
+    transformer: ({ data }) => data.allPost.edges.map(({ node }) => node),
     indexName: 'kb.OrcaFit', // Algolia index name
     itemFormatter: (item) => {
       return {
@@ -36,12 +38,29 @@ module.exports = {
   templates: {
     Post: '/:title',
     Tag: '/tag/:id',
-    Bodypart: '/bodypart/:id'
+    Bodypart: '/bodypart/:id',
+    Program: [{
+      path: '/programs/:id',
+      component: './src/templates/Program.vue'
+    },{
+      path: '/content/programs/:title',
+      component: './src/templates/Program.vue'
+    }]
+  },
+  css: {
+    loaderOptions: {
+      postcss: {
+        plugins: [
+          tailwind(),
+          autoprefixer()
+        ]
+      }
+    }
   },
   plugins: [
     {
       // Create posts from markdown files
-      use: '@gridsome/source-filesystem',
+      use: '@gridsome/source-filesystem',      
       options: {
         typeName: 'Post',
         path: 'content/posts/*.md',
@@ -53,6 +72,25 @@ module.exports = {
           },
           bodyparts: {
             typeName: 'Bodypart',
+            create: true
+          },
+          equipment: {
+            typeName: 'Equipment',
+            create: true
+          }
+        }
+      }
+    },
+    {
+      // Create posts from markdown files
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Program',
+        path: 'content/programs/*.md',
+        refs: {
+          // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
+          tags: {
+            typeName: 'Tag',
             create: true
           }
         }
