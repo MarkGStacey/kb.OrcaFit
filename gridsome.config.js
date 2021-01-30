@@ -5,6 +5,7 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 const tailwind = require('tailwindcss')
 const autoprefixer = require('autoprefixer')
+const postcss = require('postcss-import')
 const collections = [
   {
     query: `{
