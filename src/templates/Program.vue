@@ -74,6 +74,21 @@ query Post ($id: ID!) {
 </page-query>
 
 <style lang="scss">
+
+.prose table{
+  @apply border-gray-50 border border-solid;
+  @apply bg-indigo-50;
+}
+.prose th{
+  @apply border-gray-50 border border-solid;
+  @apply bg-indigo-100;
+}
+.prose tr{
+  @apply border-gray-50;
+}
+.prose td{
+  @apply border-gray-50 border border-solid;
+}
 .post-title {
   padding: calc(var(--space) / 2) 0 calc(var(--space) / 2);
   text-align: center;
