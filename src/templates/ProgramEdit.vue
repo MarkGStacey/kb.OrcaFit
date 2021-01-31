@@ -7,7 +7,7 @@
 
       <PostMeta :post="$page.post" />
     </div>
-<!-- 
+ 
     <div class="post content-box">
       <div class="post__header">
         <g-image alt="Cover image" v-if="$page.post.cover_image" :src="$page.post.cover_image" />
@@ -25,7 +25,7 @@
       <!-- Add comment widgets here -->
     </div>
 
-    <Author class="post-author" /> -->
+    <Author class="post-author" />
   </Layout>
 </template>
 
@@ -55,8 +55,9 @@ export default {
   mounted () {
     debugger
     const el = document.querySelector('textarea')
-
+    const stackedit = new Stackedit();
     
+    try {
     // Open the iframe
     stackedit.openFile({
       name: 'Filename', // with an optional filename
@@ -68,6 +69,10 @@ export default {
       stackedit.on('fileChange', (file) => {
         el.value = file.content.text;
     });
+    } catch (ex) {
+      console.log(ex)
+      debugger
+    }
   }
 }
 </script>
