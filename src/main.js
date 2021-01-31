@@ -16,8 +16,8 @@ export default function (Vue, {appOptions,  router, head, isClient }) {
   })
   
   /// Vuetify always needs an attribute data-app for menu items
-  // Vue.use(Vuetify)
-  // appOptions.vuetify = new Vuetify({});
-  // // Set default layout as a global component
-  // Vue.component('Layout', DefaultLayout)
+  Vue.use(Vuetify)
+  appOptions.vuetify = new Vuetify({});
+  // Set default layout as a global component
+  Vue.component('Layout', DefaultLayout)
 }

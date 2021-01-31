@@ -13,6 +13,7 @@
     "@gridsome/transformer-remark": "^0.6.4",
     "gridsome": "^0.7.23",
     "postcss-import": "^14.0.0",
+    "stackedit-js": "^1.0.7",
     "tailwindcss": "^2.0.1-compat",
     "vuetify": "^2.2.14"
   },
