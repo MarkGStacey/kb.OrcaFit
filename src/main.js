@@ -3,7 +3,7 @@ import '~/assets/style/index.scss'
 import '~/css/main.css' /* https://mannes.tech/gridsome-tailwindcss/ */
 import Vuetify from 'vuetify'
 
-// import 'vuetify/dist/vuetify.min.css'
+import 'vuetify/dist/vuetify.min.css'
 
 // Import default layout so we don't need to import it to every page
 import DefaultLayout from '~/layouts/Default.vue'
