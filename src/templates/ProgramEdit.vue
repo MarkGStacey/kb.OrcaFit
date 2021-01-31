@@ -2,18 +2,19 @@
   <Layout>
     <div class="post-title">
       <h1 class="post-title__text text-gray-900">
-        {{ $page.post.title }}
+        Edit {{ $page.post.title }}
       </h1>
 
       <PostMeta :post="$page.post" />
     </div>
-
+<!-- 
     <div class="post content-box">
       <div class="post__header">
         <g-image alt="Cover image" v-if="$page.post.cover_image" :src="$page.post.cover_image" />
       </div>
 
       <div class="post__content prose prose-sm" v-html="$page.post.content" />
+      <textarea key="textarea"></textarea>
 
       <div class="post__footer">
         <PostTags :post="$page.post" />
@@ -24,7 +25,7 @@
       <!-- Add comment widgets here -->
     </div>
 
-    <Author class="post-author" />
+    <Author class="post-author" /> -->
   </Layout>
 </template>
 
@@ -32,7 +33,7 @@
 import PostMeta from '~/components/PostMeta'
 import PostTags from '~/components/PostTags'
 import Author from '~/components/Author.vue'
-
+import Stackedit from 'stackedit-js'
 
 export default {
   components: {
@@ -50,6 +51,23 @@ export default {
         }
       ]
     }
+  },
+  mounted () {
+    debugger
+    const el = document.querySelector('textarea')
+
+    
+    // Open the iframe
+    stackedit.openFile({
+      name: 'Filename', // with an optional filename
+      content: {
+        text: el.value // and the Markdown content.
+      }
+    });
+    this.stackedit = new Stackedit()    
+      stackedit.on('fileChange', (file) => {
+        el.value = file.content.text;
+    });
   }
 }
 </script>

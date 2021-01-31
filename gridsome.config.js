@@ -43,6 +43,11 @@ module.exports = {
     Program: [{
       path: '/programs/:title',
       component: './src/templates/Program.vue'
+    },
+    {
+      name: "edit",
+      path: '/programedit/:title',
+      component: './src/templates/ProgramEdit.vue'
     }],
     // Program: [{
     //   path: '/programs/:id',

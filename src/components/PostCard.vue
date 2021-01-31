@@ -6,11 +6,15 @@
     <div class="post-card__content">
       <h2 class="post-card__title" v-html="post.title" />
       <p class="post-card__description" v-html="post.description" />
-
+     
       <PostMeta class="post-card__meta" :post="post" />
       <PostTags class="post-card__tags" :post="post" />
 
-      <g-link class="post-card__link" :to="post.path">Link</g-link>
+      <g-link class="post-card__link" :to="post.path">Link</g-link><!--
+      <g-link class="post-card__link" :to="'/programedit/' + post.title">Edit</g-link> -->
+
+      <v-btn :to="post.path">View</v-btn>
+      <v-btn :to="'/programedit/' + post.title.toLowerCase()">Edit</v-btn>
     </div>
   </div>
 </template>
