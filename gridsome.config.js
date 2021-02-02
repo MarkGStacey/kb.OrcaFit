@@ -6,6 +6,8 @@
 const tailwind = require('tailwindcss')
 const autoprefixer = require('autoprefixer')
 const postcss = require('postcss-import')
+const token = process.env.github_kb_orcafit
+console.log(token)
 const collections = [
   {
     query: `{
