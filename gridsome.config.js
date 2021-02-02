@@ -64,6 +64,34 @@ module.exports = {
   },
   plugins: [
     {
+    use: `gridsome-source-github-api`,
+    options: {
+      typeName: GithubPost,
+      token: "294b20cf42189f9184acc2f02c1eb14c59809ded",
+      variables: {
+      },
+      graphQLQuery: `
+      query { 
+        search(type:REPOSITORY, first:1, query:"markgstacey/kb.orcafit") {
+          edges {
+            node {
+              ... on Repository {
+                name,
+                object(expression:"master:content/posts") {
+                  ... on Tree {
+                    entries {
+                      name,
+                      type
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+        `
+    },
       // Create posts from markdown files
       use: '@gridsome/source-filesystem',      
       options: {
