@@ -1,8 +1,9 @@
 ---
-date: 
+date: 2020-02-03
 author: mgs
 title: face pull
-description: 
+published: true
+description: Face pull with bands
 summary:
 equipment:
 - bands
@@ -23,5 +24,5 @@ tags:
 (https://www.exercise.com/exercises/resistance-band-face-pull#:~:text=%20How%20to%20do%20Resistance%20Band%20Face%20Pull%3A,palms%20facing%20down%20throughout%20the%20movement.%20More%20)
 ### Studies
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjkzMjY0MDVdfQ==
+eyJoaXN0b3J5IjpbLTQ3NzYwMjI1NCwtMTgyOTMyNjQwNV19
 -->
