@@ -66,9 +66,8 @@ module.exports = {
   },
   plugins: [
     {
-    use: `gridsome-source-github-api`,
+      resolve: `gridsome-source-github-api`,
     options: {
-      typeName: GithubPost,
       token: "294b20cf42189f9184acc2f02c1eb14c59809ded",
       variables: {
       },
