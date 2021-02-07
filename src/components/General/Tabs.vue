@@ -2,7 +2,7 @@
 <div class="post-card content-box p-0">
  <v-tabs>
       <v-tab><g-link :to="'/'">Posts</g-link></v-tab>
-      <v-tab>
+      <v-tab  class="w-36">
         <v-autocomplete
           id="search"
           v-model="select"
@@ -16,6 +16,7 @@
           dense
           solo
           @change="changed"
+          append-icon="search"
         />
       </v-tab>
       <v-tab href="programs"><g-link :to="'Programs'">Programs</g-link></v-tab>
