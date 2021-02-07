@@ -14,10 +14,10 @@ tags:
 - mobility
 - ---
 # Summary
+Stand with your unaffected hand on a table. Lean well forwards bending at the hips. Let your arm hang down. Gently let your arm swing forwards and backwards and then in a circular motion with minimal effort.
+
 ### Synonyms
 #### Alternatives
-
-## Description
 
 ### Progressions
 #### Regressed versions (Progressions to get to this movement)
@@ -25,6 +25,8 @@ tags:
 #### Progressive versions
 
 ### Cues
+Tip:
+Keep the arc / circle small
 
 ### Links
 
@@ -33,5 +35,6 @@ tags:
 
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4NDE0MTE0NSwxMjI5MzUxNzM5XX0=
+eyJoaXN0b3J5IjpbMTQ3MTcwNDA1MCwxODg0MTQxMTQ1LDEyMj
+kzNTE3MzldfQ==
 -->
