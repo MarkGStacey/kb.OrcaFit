@@ -12,14 +12,25 @@ equipment:
 tags: 
 - exercise
 ---
-# Title
+# Summary
 ### Synonyms
-### 
 #### Alternatives
-### Description
-### Progressions#### Regressed versions (Progressions to get to this movement)#### Progressive versions### Cues### Links### Studies
+
+## Description
+
+### Progressions
+#### Regressed versions (Progressions to get to this movement)
+
+#### Progressive versions
+
+### Cues
+
+### Links
+
+### Studies
+
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTI1NDg5MzddfQ==
+eyJoaXN0b3J5IjpbMTkzMDk0MTQ3MV19
 -->
