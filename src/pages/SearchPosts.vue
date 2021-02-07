@@ -1,11 +1,18 @@
 <template>
   <Layout :show-logo="true">
-    <input
+    <Author :show-title="true" />
+    <tabs/>
+    <v-autocomplete
       id="search"
-      v-model="searchTerm"
-      class="input"
-      type="text"
-      placeholder="Search">
+      v-model="select"
+       :search-input.sync="searchTerm"
+      cache-items
+      label="Search Posts"
+      :items="searchResults"
+      item-text="title"
+      item-value="id"
+      />
+      <b>{{searchTerm}}</b>
     {{ searchResults }}
 
   </Layout>
@@ -29,13 +36,16 @@ export default {
     title: 'Home'
   },
   data: () => ({
-    searchTerm: ''
+    searchTerm: '',
+    select: null
   }),
   computed: {
     searchResults () {
       const searchTerm = this.searchTerm
       if (searchTerm.length < 3) return []
-      return this.$search.search({ query: searchTerm, limit: 5 })
+      let ret = this.$search.search({ query: searchTerm, limit: 5 })
+      // debugger
+      return ret
     }
   }
 }

@@ -109,11 +109,10 @@ module.exports = {
           {
             typeName: 'Post',
             indexName: 'Post',
-            fields: ['id','title', 'handle', 'description']
+            fields: ['id','title', 'handle', 'description', 'path']
           }
         ]
       }
-    }
     }
     // ,
     // {
