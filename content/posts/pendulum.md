@@ -5,8 +5,9 @@ published: true
 title: pendulum
 description: 
 summary:
-Muscles:
-- rotator cuff.
+muscles:
+- rotator cuff
+- supraspinatus
 equipment:
 -
 tags: 
@@ -36,6 +37,6 @@ Keep the arc / circle small
 
  
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODI2MjAzODQsMTg4NDE0MTE0NSwxMj
-I5MzUxNzM5XX0=
+eyJoaXN0b3J5IjpbOTcwOTEwMTQ3LDE4ODQxNDExNDUsMTIyOT
+M1MTczOV19
 -->
