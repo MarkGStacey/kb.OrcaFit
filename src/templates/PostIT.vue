@@ -1,13 +1,13 @@
 <template>
   <Layout>
     <div class="post-title">
-      <h1 class="post-title__text text-gray-900">
-        {{ $page.post.title }}
+      <h1 class="post-title__text">
+        Title: {{ $page.post.title }}
+        ID: {{ $page.post.id }}
       </h1>
 
-      
-      <search></search>
       <PostMeta :post="$page.post" />
+
     </div>
 
     <div class="post content-box">
@@ -15,7 +15,7 @@
         <g-image alt="Cover image" v-if="$page.post.cover_image" :src="$page.post.cover_image" />
       </div>
 
-      <div class="post__content prose prose-sm" v-html="$page.post.content" />
+      <div class="post__content" v-html="$page.post.content" />
 
       <div class="post__footer">
         <PostTags :post="$page.post" />
@@ -34,15 +34,18 @@
 import PostMeta from '~/components/PostMeta'
 import PostTags from '~/components/PostTags'
 import Author from '~/components/Author.vue'
-import search from '~/components/General/Search'
-
-
+import MarkdownIt from 'markdown-it' 
 export default {
   components: {
     Author,
     PostMeta,
-    PostTags,
-    search
+    PostTags
+  },
+  computed: {
+    content () {
+      const md = new MarkdownIt()
+      return md.render(this.$page.post.body)
+    }
   },
   metaInfo () {
     return {

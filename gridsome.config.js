@@ -129,18 +129,31 @@ module.exports = {
           }
         }
       }
-    }
-    ,
+    },
     {
-      use: `gridsome-plugin-algolia`,
+      use: 'gridsome-plugin-flexsearch',
       options: {
-        appId: 'X8QGZL1SEH',
-        apiKey: 'da245f71d8e5c4b1b9beb99e113b44bf',
-        collections,
-        chunkSize: 10000, // default: 1000
-        enablePartialUpdates: false, // default: false
-      },
+        searchFields: ['title', 'tags'],
+        collections: [
+          {
+            typeName: 'Post',
+            indexName: 'Post',
+            fields: ['id','title', 'handle', 'description', 'path']
+          }
+        ]
+      }
     }
+    // ,
+    // {
+    //   use: `gridsome-plugin-algolia`,
+    //   options: {
+    //     appId: 'X8QGZL1SEH',
+    //     apiKey: 'da245f71d8e5c4b1b9beb99e113b44bf',
+    //     collections,
+    //     chunkSize: 10000, // default: 1000
+    //     enablePartialUpdates: false, // default: false
+    //   },
+    // }
     // ,
     // {
     //   use: `gridsome-plugin-algolia`,

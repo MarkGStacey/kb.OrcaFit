@@ -5,8 +5,6 @@
         {{ $page.post.title }}
       </h1>
 
-      
-      <search></search>
       <PostMeta :post="$page.post" />
     </div>
 
@@ -34,15 +32,13 @@
 import PostMeta from '~/components/PostMeta'
 import PostTags from '~/components/PostTags'
 import Author from '~/components/Author.vue'
-import search from '~/components/General/Search'
 
 
 export default {
   components: {
     Author,
     PostMeta,
-    PostTags,
-    search
+    PostTags
   },
   metaInfo () {
     return {
@@ -60,7 +56,7 @@ export default {
 
 <page-query>
 query Post ($id: ID!) {
-  post: post (id: $id) {
+  post: program (id: $id) {
     title
     path
     date (format: "D. MMMM YYYY")
@@ -78,6 +74,21 @@ query Post ($id: ID!) {
 </page-query>
 
 <style lang="scss">
+
+.prose table{
+  @apply border-gray-50 border border-solid;
+  @apply bg-indigo-50;
+}
+.prose th{
+  @apply border-gray-50 border border-solid;
+  @apply bg-indigo-100;
+}
+.prose tr{
+  @apply border-gray-50;
+}
+.prose td{
+  @apply border-gray-50 border border-solid;
+}
 .post-title {
   padding: calc(var(--space) / 2) 0 calc(var(--space) / 2);
   text-align: center;
