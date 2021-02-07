@@ -1,6 +1,7 @@
 ---
 date: 
 author: mgs
+published: true
 title: Cossack squats
 description: 
 summary: 
@@ -20,5 +21,6 @@ tags:
 ### Links
 ### Studies
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTI3OTI0ODRdfQ==
+eyJoaXN0b3J5IjpbLTE4Mjk0NTk0NDYsLTExNTI3OTI0ODRdfQ
+==
 -->
