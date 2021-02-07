@@ -2,11 +2,15 @@
   <Layout :show-logo="true">
     <!-- Author intro -->
     <Author :show-title="true" />
+
     <div>
-      <g-link :to="'Programs'">Programs</g-link>
+      
     </div>
     <!-- List posts -->
+    
+      <Tabs/>
     <div class="posts">
+      
       <PostCard v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node"/>
       <Pager :info="$page.posts.pageInfo"/>
     </div>
@@ -49,13 +53,15 @@ query ($page: Int) {
 <script>
 import Author from '~/components/Author.vue'
 import PostCard from '~/components/PostCard.vue'
+import Tabs from '~/components/General/Tabs.vue'
 import { Pager } from 'gridsome'
 
 export default {
   components: {
     Author,
     PostCard,
-    Pager
+    Pager,
+    Tabs
   },
   metaInfo: {
     title: 'Home'

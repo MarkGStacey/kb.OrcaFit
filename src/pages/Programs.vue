@@ -2,7 +2,7 @@
   <Layout :show-logo="true">
     <!-- Author intro -->
     <Author :show-title="true" />
-
+    <tabs/>
     <!-- List posts -->
     <div class="posts">
       <PostCard v-for="edge in $page.programs.edges" :key="edge.node.id" :post="edge.node"/>
@@ -47,13 +47,15 @@ query ($page: Int) {
 <script>
 import Author from '~/components/Author.vue'
 import PostCard from '~/components/PostCard.vue'
+import Tabs from '~/components/General/Tabs.vue'
 import { Pager } from 'gridsome'
 
 export default {
   components: {
     Author,
     PostCard,
-    Pager
+    Pager,
+    Tabs
   },
   metaInfo: {
     title: 'Home'

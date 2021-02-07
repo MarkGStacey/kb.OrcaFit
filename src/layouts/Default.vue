@@ -59,6 +59,7 @@ import Logo from '~/components/Logo.vue'
 import ToggleTheme from '~/components/ToggleTheme.vue'
 import FooterBackground from '~/components/General/FooterBackground.vue'
 import Hamburger from '~/components/General/Hamburger.vue'
+ 
 export default {
   props: {
     showLogo: { default: true }
