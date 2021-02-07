@@ -6,10 +6,7 @@
       </h1>
 
       
-    <h1 class="mt-8 font-bold text-1xl">
-      Hello, world!
-    </h1>
-
+      <search></search>
       <PostMeta :post="$page.post" />
     </div>
 
@@ -37,13 +34,15 @@
 import PostMeta from '~/components/PostMeta'
 import PostTags from '~/components/PostTags'
 import Author from '~/components/Author.vue'
+import search from '~/components/General/Search'
 
 
 export default {
   components: {
     Author,
     PostMeta,
-    PostTags
+    PostTags,
+    search
   },
   metaInfo () {
     return {
