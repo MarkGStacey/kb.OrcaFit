@@ -1,20 +1,19 @@
 <template>
   <Layout :show-logo="true">
     <!-- Author intro -->
-    <Author :show-title="true" />
-
-    <div>
-      
-    </div>
+    <!-- <Author :show-title="true" /> -->
     <!-- List posts -->
-    
-     <Tabs/>
+     <!-- <Tabs/> -->
+     <Header/>
+     <PostHeader/>
+     </div>
+    <br/>
     <div class="posts">
-     
       <PostCard v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node"/>
       <Pager :info="$page.posts.pageInfo"/>
+      
     </div>
-
+    
   </Layout>
 </template>
 <page-query>
@@ -51,17 +50,21 @@ query ($page: Int) {
 </page-query>
 
 <script>
-import Author from '~/components/Author.vue'
 import PostCard from '~/components/PostCard.vue'
-import Tabs from '~/components/General/Tabs.vue'
+import Header from '~/components/General/Header.vue'
+import PostHeader from '~/components/General/PostHeader.vue'
 import { Pager } from 'gridsome'
+import SearchPosts from '~/components/General/SearchPosts.vue'
 
 export default {
   components: {
-    Author,
+    // Author,
     PostCard,
     Pager,
-    Tabs
+    Header,
+    PostHeader,
+    SearchPosts
+    // Tabs
   },
   metaInfo: {
     title: 'Home'
