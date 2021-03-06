@@ -6,7 +6,7 @@
       </h1>
 
       
-      <search></search>
+      <!-- <search></search> -->
       <PostMeta :post="$page.post" folder='posts'/>
     </div>
 
@@ -34,15 +34,14 @@
 import PostMeta from '~/components/PostMeta'
 import PostTags from '~/components/PostTags'
 import Author from '~/components/Author.vue'
-import search from '~/components/General/Search'
+// import search from '~/components/General/Search'
 
 
 export default {
   components: {
     Author,
     PostMeta,
-    PostTags,
-    search
+    PostTags
   },
   metaInfo () {
     return {

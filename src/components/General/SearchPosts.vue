@@ -13,6 +13,7 @@
           solo
           @change="changed"
           append-icon="search"
+          style="max-width:300px"
         />
 </template>
 
