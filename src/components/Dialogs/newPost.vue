@@ -79,12 +79,12 @@ export default {
             password: 'L0pt@8192', // Either your password or an authentication token if two-factor authentication is enabled
             auth: 'basic',
             repository: 'kb.Orcafit',
-            branchName: 'master'
+            branchName: 'githubJs-newFile'
           };
           var github = new GitHub(config);
           var repo = github.getRepo('MarkGStacey', 'kb.Orcafit');
           repo.writeFile(
-            'master', // e.g. 'master'
+            'githubJs-newFile', // e.g. 'master'
             'content/posts/' + this.title.replace(/\s+/g, '-').toLowerCase() + '.md', // e.g. 'blog/index.md'
             this.description, // e.g. 'Hello world, this is my new content'
             'Created ' + this.title, // e.g. 'Created new index'
