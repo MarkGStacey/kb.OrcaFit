@@ -13,7 +13,7 @@ equipment:
 tags: 
 - exercise
 - mobility
-- ---
+---
 # Summary
 Stand with your unaffected hand on a table. Lean well forwards bending at the hips. Let your arm hang down. Gently let your arm swing forwards and backwards and then in a circular motion with minimal effort.
 
