@@ -1,7 +1,15 @@
 // Import main css
 import '~/assets/style/index.scss'
 import '~/css/main.css' /* https://mannes.tech/gridsome-tailwindcss/ */
-import Vuetify from 'vuetify'
+import Vuetify from 'vuetify' /*https://vuetifyjs.com/en/features/icon-fonts/#material-design-icons*/
+import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loader
+// import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+// import { config, library } from '@fortawesome/fontawesome-svg-core'
+// import { faGithub } from '@fortawesome/free-brands-svg-icons'
+// import '@fortawesome/fontawesome-svg-core/styles.css'
+
+// config.autoAddCss = false;
+// library.add(faGithub, faTwitter)
 
 import 'vuetify/dist/vuetify.min.css'
 
@@ -10,14 +18,15 @@ import DefaultLayout from '~/layouts/Default.vue'
 
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 export default function (Vue, {appOptions,  router, head, isClient }) {
-  head.link.push({
-    rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/icon?family=Material+Icons'
-  })
+  // head.link.push({
+  //   rel: 'stylesheet',
+  //   href: 'https://fonts.googleapis.com/icon?family=Material+Icons'
+  // })
   
   /// Vuetify always needs an attribute data-app for menu items
   Vue.use(Vuetify)
   appOptions.vuetify = new Vuetify({});
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
+  // Vue.component('font-awesome', FontAwesomeIcon)
 }

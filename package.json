@@ -19,10 +19,14 @@
     "vuetify": "^2.2.14"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/free-brands-svg-icons": "^5.15.2",
+    "@fortawesome/vue-fontawesome": "^2.0.2",
     "@fullhuman/postcss-purgecss": "^4.0.0",
+    "@mdi/font": "^5.9.55",
     "@tailwindcss/typography": "^0.4.0",
-    "postcss-preset-env": "^6.7.0",
     "node-sass": "^5.0.0",
+    "postcss-preset-env": "^6.7.0",
     "sass-loader": "^10.1.1"
   }
 }

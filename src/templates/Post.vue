@@ -44,6 +44,9 @@ export default {
     PostTags,
     search
   },
+  data: () => ({
+    baseUrl: process.env.GRIDSOME_POSTS_BASEURL
+  }),
   metaInfo () {
     return {
       title: this.$page.post.title,
