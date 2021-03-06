@@ -27,7 +27,7 @@
         class="btn"
               icon
               dark
-              @click="dialog = false"
+              @click="save()"
             >
               <v-icon>mdi-content-save</v-icon>
             </v-btn>
@@ -56,17 +56,47 @@
 </template>
 
 <script>
+import GitHub from 'github-api'
 export default {
     data: () => ({
         dialog: false,
         valid: true,
-        title: '',
+        title: 'TestSaveToGithub',
         description: '',
         titleRules: [
         v => !!v || 'Title is required',
         v => (v && v.length <= 100) || 'Name must be less than 100 characters',
         ]
-    })
+    }),
+    methods: {
+      save () {
+        let vueThis = this
+        var cont = this.$refs.form.validate()
+        if (cont) {
+          debugger
+          var config = {
+            username: 'MarkGStacey',
+            password: 'L0pt@8192', // Either your password or an authentication token if two-factor authentication is enabled
+            auth: 'basic',
+            repository: 'kb.Orcafit',
+            branchName: 'master'
+          };
+          var github = new GitHub(config);
+          var repo = github.getRepo('MarkGStacey', 'kb.Orcafit');
+          repo.writeFile(
+            'master', // e.g. 'master'
+            'content/posts/' + this.title.replace(/\s+/g, '-').toLowerCase() + '.md', // e.g. 'blog/index.md'
+            this.description, // e.g. 'Hello world, this is my new content'
+            'Created ' + this.title, // e.g. 'Created new index'
+            {author: 'Mark Stacey', encode: true, committer: 'MarkGStacey'},
+            function(err) {
+              console.log(err)
+              debugger
+            }
+          );
+        }
+      }
+    }
 }
 </script>
 <style lang="scss" scoped>
