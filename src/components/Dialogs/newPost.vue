@@ -56,9 +56,12 @@
 </template>
 
 <script>
-import GitHub from 'github-api'
+// import GitHub from 'github-api'
+import {Octokit} from '@octokit/rest'
+import { Base64 } from 'js-base64'
 export default {
     data: () => ({
+        auth: process.env.GRIDSOME_GITHUB_KB_ORCAFIT,
         dialog: false,
         valid: true,
         title: 'TestSaveToGithub',
@@ -74,26 +77,67 @@ export default {
         var cont = this.$refs.form.validate()
         if (cont) {
           debugger
-          var config = {
-            username: 'MarkGStacey',
-            password: 'L0pt@8192', // Either your password or an authentication token if two-factor authentication is enabled
-            auth: 'basic',
-            repository: 'kb.OrcaFit',
-            branchName: 'githubJs-newFile'
-          };
-          var github = new GitHub(config);
-          var repo = github.getRepo('MarkGStacey', 'kb.OrcaFit');
-          repo.writeFile(
-            'githubJs-newFile', // e.g. 'master'
-            'content/posts/' + this.title.replace(/\s+/g, '-').toLowerCase() + '.md', // e.g. 'blog/index.md'
-            this.description, // e.g. 'Hello world, this is my new content'
-            'Created ' + this.title, // e.g. 'Created new index'
-            {author: 'Mark Stacey', encode: true, committer: 'MarkGStacey'},
-            function(err) {
-              console.log(err)
-              debugger
-            }
-          );
+          const octokit = new Octokit({
+            auth: vueThis.auth,
+            userAgent: 'kb.OrcaFit',
+            log: {
+              debug: () => {
+                debugger
+              },
+              info: () => {},
+              warn: console.warn,
+              error: console.error
+            }})
+            data = octokit.repos.createOrUpdateFileContents({
+              owner: 'MarkGStacey',
+              repo: 'kb.OrcaFit',
+              path: 'content/posts/' + '' + this.title.replace(/\s+/g, '-').toLowerCase() + '.md',
+              message: 'Created: ' + this.title,
+              content: Base64.encode(this.description),
+              committer: {
+                name: 'Gridsome',
+                email: 'fitness@aphelion.bi'
+              },
+              author: {
+                name: 'Gridsome',
+                email: 'fitness@aphelion.bi'
+              },
+            }).then( data => {
+              console.log(data)
+              dialog = true
+            });
+          // octokit.repos.createOrUpdateFileContents({
+          //   owner,
+          //   repo,
+          //   path,
+          //   message,
+          //   content,
+          //   committer.name,
+          //   committer.email,
+          //   author.name,
+          //   author.email
+          //       })
+          // var config = {
+          //   username: 'MarkGStacey',
+          //   password: 'L0pt@8192', // Either your password or an authentication token if two-factor authentication is enabled
+          //   auth: 'basic',
+          //   repository: 'kb.OrcaFit',
+          //   branchName: 'master'
+          // };
+          // var github = new GitHub(config);
+          // var repo = github.getRepo('MarkGStacey', 'kb.OrcaFit');
+
+          // repo.writeFile(
+          //   'master', // e.g. 'master'
+          //   '' + this.title.replace(/\s+/g, '-').toLowerCase() + '.md', // e.g. 'blog/index.md'
+          //   this.description, // e.g. 'Hello world, this is my new content'
+          //   'Created ' + this.title, // e.g. 'Created new index'
+          //   {author: 'Mark Stacey', encode: true, committer: 'MarkGStacey'},
+          //   function(err) {
+          //     console.log(err)
+          //     debugger
+          //   }
+          // );
         }
       }
     }
