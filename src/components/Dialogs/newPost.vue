@@ -65,24 +65,60 @@ export default {
         dialog: false,
         valid: true,
         title: 'TestSaveToGithub',
+        titleExists: false,
         description: '',
         titleRules: [
         v => !!v || 'Title is required',
         v => (v && v.length <= 100) || 'Name must be less than 100 characters',
+        // v => titleExists || 'Title exists already',
         ]
     }),
+    computed: {
+      template () {
+        return `---
+date:
+author: mgs
+published: true
+title: ${this.title}
+summary:
+Muscles:
+- 
+equipment:
+-
+tags: 
+- exercise
+---
+# ${this.title}
+## Description
+${this.description}
+### Synonyms
+#### Alternatives
+
+### Progressions
+#### Regressed versions (Progressions to get to this movement)
+
+#### Progressive versions
+
+### Cues
+
+### Links
+
+### Studies
+`
+      }
+    },
     methods: {
       save () {
         let vueThis = this
         var cont = this.$refs.form.validate()
+        console.log(this.template)
         if (cont) {
-          debugger
           const octokit = new Octokit({
             auth: vueThis.auth,
             userAgent: 'kb.OrcaFit',
             log: {
               debug: () => {
-                debugger
+                // debugger
               },
               info: () => {},
               warn: console.warn,
@@ -102,9 +138,16 @@ export default {
                 name: 'Gridsome',
                 email: 'fitness@aphelion.bi'
               },
-            }).then( data => {
+            }).then( (data) => {
               console.log(data)
-              dialog = true
+              vueThis.dialog = false
+            }).catch( (err) => {
+              console.log(err)
+              if (err.status === 422) {
+                vueThis.titleExists = false
+                vueThis.$refs.form.validate()
+              }
+              debugger
             });
           // octokit.repos.createOrUpdateFileContents({
           //   owner,
