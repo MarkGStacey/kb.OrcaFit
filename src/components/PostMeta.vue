@@ -1,6 +1,6 @@
 <template>
    <div class="post-meta">
-     <g-link :to="baseUrl + post.path.replace(/\\|\//g,'') +'.md'">
+     <g-link :to="baseUrl + folder + '/' + post.path.replace(/\\|\//g,'') +'.md'">
        <v-icon>mdi-pencil</v-icon>Edit
      </g-link>
       Posted {{ post.date }}.
@@ -12,10 +12,10 @@
 
 <script>
 export default {
-  props: ['post']
+  props: ['post', 'folder']
 ,
   data: () => ({
-    baseUrl: process.env.GRIDSOME_POSTS_BASEURL
+    baseUrl: process.env.GRIDSOME_CONTENT_BASEURL
   })
 }
 </script>

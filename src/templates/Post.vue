@@ -7,7 +7,7 @@
 
       
       <search></search>
-      <PostMeta :post="$page.post" />
+      <PostMeta :post="$page.post" folder='posts'/>
     </div>
 
     <div class="post content-box">
@@ -44,9 +44,6 @@ export default {
     PostTags,
     search
   },
-  data: () => ({
-    baseUrl: process.env.GRIDSOME_POSTS_BASEURL
-  }),
   metaInfo () {
     return {
       title: this.$page.post.title,
