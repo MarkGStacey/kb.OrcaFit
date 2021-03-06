@@ -18,10 +18,10 @@ import DefaultLayout from '~/layouts/Default.vue'
 
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 export default function (Vue, {appOptions,  router, head, isClient }) {
-  // head.link.push({
-  //   rel: 'stylesheet',
-  //   href: 'https://fonts.googleapis.com/icon?family=Material+Icons'
-  // })
+  head.link.push({
+    rel: 'stylesheet',
+    href: 'https://fonts.googleapis.com/icon?family=Material+Icons'
+  }) ///TODO: Work out how to only do local
   
   /// Vuetify always needs an attribute data-app for menu items
   Vue.use(Vuetify)
