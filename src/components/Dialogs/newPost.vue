@@ -128,8 +128,8 @@ ${this.description}
               owner: 'MarkGStacey',
               repo: 'kb.OrcaFit',
               path: 'content/posts/' + '' + this.title.replace(/\s+/g, '-').toLowerCase() + '.md',
-              message: 'Created: ' + this.title,
-              content: Base64.encode(this.description),
+              message: 'Created: ' + this.title ,
+              content: Base64.encode(this.template),
               committer: {
                 name: 'Gridsome',
                 email: 'fitness@aphelion.bi'
