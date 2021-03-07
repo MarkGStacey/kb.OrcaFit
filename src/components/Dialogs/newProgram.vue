@@ -2,6 +2,7 @@
  <v-dialog
         v-model="dialog"
         transition="dialog-bottom-transition"
+        fullscreen
       ><template v-slot:activator="{ on, attrs }">
         <v-btn
           icon
@@ -49,7 +50,8 @@
         label="Description"
         required
       />
-    </v-form>
+    <MarkdownEditor v-model="body" />
+        </v-form>
         </v-card>
       </v-dialog>
     
@@ -59,7 +61,11 @@
 // import GitHub from 'github-api'
 import {Octokit} from '@octokit/rest'
 import { Base64 } from 'js-base64'
+import MarkdownEditor from '@voraciousdev/vue-markdown-editor'
 export default {
+  components: {
+    MarkdownEditor
+  },
     data: () => ({
         auth: process.env.GRIDSOME_GITHUB_KB_ORCAFIT,
         dialog: false,
@@ -67,7 +73,15 @@ export default {
         title: '',
         titleExists: false,
         description: '',
-        body: '',
+        body: `# Frequency
+E.g. Once daily
+## Table
+Exercise|Reps/Time|Sets|Notes
+--|--|--|--|
+  |  |  |  |
+  |  |  |  |
+  |  |  |  |  
+`,
         titleRules: [
         v => !!v || 'Title is required',
         v => (v && v.length <= 100) || 'Name must be less than 100 characters',
