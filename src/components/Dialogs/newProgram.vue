@@ -80,13 +80,7 @@ date:
 author: mgs
 published: true
 title: ${this.title}
-summary:
-Muscles:
-- 
-equipment:
--
 tags: 
-- exercise
 ---
 # ${this.title}
 ## Description
@@ -115,7 +109,7 @@ ${this.description}
             data = octokit.repos.createOrUpdateFileContents({
               owner: 'MarkGStacey',
               repo: 'kb.OrcaFit',
-              path: 'content/posts/' + '' + this.title.replace(/\s+/g, '-').toLowerCase() + '.md',
+              path: 'content/programs/' + '' + this.title.replace(/\s+/g, '-').toLowerCase() + '.md',
               message: 'Created: ' + this.title ,
               content: Base64.encode(this.template),
               committer: {
