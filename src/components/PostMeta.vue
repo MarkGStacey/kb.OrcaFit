@@ -1,8 +1,5 @@
 <template>
    <div class="post-meta">
-     <g-link :to="baseUrl + folder + '/' + post.path.replace(/\\|\//g,'') +'.md'">
-       <v-icon>mdi-pencil</v-icon>Edit
-     </g-link>
       Posted {{ post.date }}.
       <template v-if="post.timeToRead">
         <strong>{{ post.timeToRead }} min read.</strong>
@@ -12,11 +9,7 @@
 
 <script>
 export default {
-  props: ['post', 'folder']
-,
-  data: () => ({
-    baseUrl: process.env.GRIDSOME_CONTENT_BASEURL
-  })
+  props: ['post']
 }
 </script>
 

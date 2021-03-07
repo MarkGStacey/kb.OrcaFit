@@ -4,8 +4,10 @@
       <h1 class="post-title__text text-gray-900">
         {{ $page.post.title }}
       </h1>
-
-      <PostMeta :post="$page.post" folder='programs' />
+        <g-link :to="baseUrl + 'programs' + '/' + $page.post.path.replace(/\\|\//g,'') +'.md'">
+          <v-icon>mdi-pencil</v-icon>Edit
+        </g-link>
+      <PostMeta :post="$page.post" />
     </div>
 
     <div class="post content-box">
@@ -40,6 +42,9 @@ export default {
     PostMeta,
     PostTags
   },
+  data: () => ({
+    baseUrl: process.env.GRIDSOME_CONTENT_BASEURL
+  }),
   metaInfo () {
     return {
       title: this.$page.post.title,

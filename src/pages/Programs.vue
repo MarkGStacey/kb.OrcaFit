@@ -5,7 +5,7 @@
     <!-- List posts -->
      <!-- <Tabs/> -->
      <Header/>
-     <PostHeader/>
+     <ProgramHeader/>
     <div class="posts">
       <PostCard v-for="edge in $page.programs.edges" :key="edge.node.id" :post="edge.node"/>
       <Pager :info="$page.programs.pageInfo"/>
@@ -49,14 +49,14 @@ query ($page: Int) {
 <script>
 import PostCard from '~/components/PostCard.vue'
 import Header from '~/components/General/Header.vue'
-import PostHeader from '~/components/General/PostHeader.vue'
+import ProgramHeader from '~/components/General/ProgramHeader.vue'
 import { Pager } from 'gridsome'
 
 export default {
   components: {
     PostCard,
     Pager,
-    PostHeader,
+    ProgramHeader,
     Header
   },
   metaInfo: {
