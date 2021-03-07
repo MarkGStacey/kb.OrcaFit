@@ -100,7 +100,6 @@ tags:
 # ${this.title}
 ## Description
 ${this.description}
-## Description
 ${this.body}
 `
       }
