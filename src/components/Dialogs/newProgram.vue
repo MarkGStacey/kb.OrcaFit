@@ -72,7 +72,7 @@ export default {
         valid: true,
         title: '',
         titleExists: false,
-        description: '',
+        description: 'Overview',
         body: `# Frequency
 E.g. Once daily
 ## Table
