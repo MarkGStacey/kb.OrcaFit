@@ -50,7 +50,9 @@
         label="Description"
         required
       />
+    <ClientOnly>
     <MarkdownEditor v-model="body" />
+    </ClientOnly>
         </v-form>
         </v-card>
       </v-dialog>
@@ -61,10 +63,13 @@
 // import GitHub from 'github-api'
 import {Octokit} from '@octokit/rest'
 import { Base64 } from 'js-base64'
-import MarkdownEditor from '@voraciousdev/vue-markdown-editor'
+// import MarkdownEditor from '@voraciousdev/vue-markdown-editor'
 export default {
   components: {
-    MarkdownEditor
+    MarkdownEditor: () =>
+        import ('@voraciousdev/vue-markdown-editor')
+          .then(m => m.MarkdownEditor)
+          .catch(),
   },
     data: () => ({
         auth: process.env.GRIDSOME_GITHUB_KB_ORCAFIT,
