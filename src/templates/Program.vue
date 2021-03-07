@@ -4,7 +4,7 @@
       <h1 class="post-title__text text-gray-900">
         {{ $page.post.title }}
       </h1>
-        <g-link :to="baseUrl + 'programs' + '/' + $page.post.path.replace(/\\|\//g,'') +'.md'">
+        <g-link :to="baseUrl + 'programs/' + $page.post.path.replace('programs', '').replace(/\\|\//g,'') +'.md'">
           <v-icon>mdi-pencil</v-icon>Edit
         </g-link>
       <PostMeta :post="$page.post" />
