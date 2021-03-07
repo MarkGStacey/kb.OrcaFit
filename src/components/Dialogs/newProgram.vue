@@ -68,7 +68,6 @@ export default {
   components: {
     MarkdownEditor: () =>
         import ('@voraciousdev/vue-markdown-editor')
-          .then(m => m.MarkdownEditor)
           .catch(),
   },
     data: () => ({
