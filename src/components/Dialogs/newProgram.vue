@@ -67,6 +67,7 @@ export default {
         title: '',
         titleExists: false,
         description: '',
+        body: '',
         titleRules: [
         v => !!v || 'Title is required',
         v => (v && v.length <= 100) || 'Name must be less than 100 characters',
@@ -85,7 +86,8 @@ tags:
 # ${this.title}
 ## Description
 ${this.description}
-
+## Description
+${this.body}
 `
       }
     },
