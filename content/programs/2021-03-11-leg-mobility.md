@@ -14,10 +14,10 @@ Overview
 ## Table
 Exercise|Reps/Time|Sets|Notes
 --|--|--|--|
-https://kb.orca.fit/lunge-matrix/ |  |  |  |
-  https://kb.orca.fit/shin-box/ | 10  |3|  step to lunge|
-  https://kb.orca.fit/single-leg-rdl/|  8|   3| weighted |  
-  https://kb.orca.fit/single-leg-hip-bridge/|  8  | 3 |foot elevated, dig heel into bench |  
-  https://kb.orca.fit/single-leg-box-squat/| 8  |  3. | keeping big toe visible inside of knee and hips straight |   
+[Lunge matrix](https://kb.orca.fit/lunge-matrix/) |  |  |  |
+  [Shin box](https://kb.orca.fit/shin-box/) | 10  |3|  step to lunge|
+  [Single leg RDL](https://kb.orca.fit/single-leg-rdl/)|  8|   3| weighted |  
+  [Single leg hip bridge](https://kb.orca.fit/single-leg-hip-bridge/) |  8  | 3 |foot elevated, dig heel into bench |  
+  [Single leg box squat](https://kb.orca.fit/single-leg-box-squat/) | 8  |  3. | keeping big toe visible inside of knee and hips straight |   
   
 
