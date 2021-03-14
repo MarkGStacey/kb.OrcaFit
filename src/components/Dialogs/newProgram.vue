@@ -1,5 +1,5 @@
 <template>
- <v-dialog
+ <v-dialog content-class="p-2 m-2"
         v-model="dialog"
         transition="dialog-bottom-transition"
         fullscreen
@@ -13,7 +13,7 @@
           >mdi-file-plus</v-icon>New Program
         </v-btn>
         </template>
-        <v-card class="p-2">
+        <v-card>
         <v-card-actions
         class="justify-between">
         <v-btn
@@ -34,6 +34,7 @@
             </v-btn>
         </v-card-actions>
         <v-form
+        class="p-2"
     ref="form"
       v-model="valid"
       lazy-validation
@@ -51,7 +52,7 @@
         required
       />
     <ClientOnly>
-    <MarkdownEditor v-model="body" />
+    <MarkdownEditor v-model="body" class="p-2"/>
     </ClientOnly>
         </v-form>
         </v-card>

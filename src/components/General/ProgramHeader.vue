@@ -2,7 +2,7 @@
      <div class="content-box" style="padding:0px;">
        <v-toolbar>
       <SearchPrograms/>
-      <NewProgram/>
+      <NewProgram class="p-2"/>
       </v-toolbar>
     </div>
 </template>

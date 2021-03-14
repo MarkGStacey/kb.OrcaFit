@@ -1,5 +1,6 @@
 <template>
  <v-dialog
+        content-class="p-2"
         v-model="dialog"
         transition="dialog-bottom-transition"
       ><template v-slot:activator="{ on, attrs }">
@@ -49,6 +50,10 @@
         label="Description"
         required
       />
+      <ClientOnly>
+    <MarkdownEditor v-model="body" class="p2"/>
+    </ClientOnly>
+    
     </v-form>
         </v-card>
       </v-dialog>
@@ -67,6 +72,7 @@ export default {
         title: 'TestSaveToGithub',
         titleExists: false,
         description: '',
+        body: '',
         titleRules: [
         v => !!v || 'Title is required',
         v => (v && v.length <= 100) || 'Name must be less than 100 characters',
