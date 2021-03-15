@@ -13,6 +13,7 @@
     "@gridsome/transformer-remark": "^0.6.4",
     "@octokit/rest": "^18.3.4",
     "@voraciousdev/vue-markdown-editor": "^0.3.0",
+    "dayjs": "^1.10.4",
     "gridsome": "^0.7.23",
     "gridsome-plugin-flexsearch": "^1.0.5",
     "gridsome-source-github-api": "^0.2.0",
