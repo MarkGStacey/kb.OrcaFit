@@ -15,7 +15,7 @@
 </template>
 <page-query>
 query ($page: Int) {
-  programs: allProgram(perPage: 10, page: $page, sortBy: "title", order: ASC, filter: { published: { eq: true }})
+  programs: allProgram(perPage: 10, page: $page, sortBy: "title", order: DESC, filter: { published: { eq: true }})
      @paginate {
       pageInfo {
         totalPages

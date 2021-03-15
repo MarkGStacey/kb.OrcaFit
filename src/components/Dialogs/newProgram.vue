@@ -64,6 +64,7 @@
 // import GitHub from 'github-api'
 import {Octokit} from '@octokit/rest'
 import { Base64 } from 'js-base64'
+import dayjs from 'dayjs'
 // import MarkdownEditor from '@voraciousdev/vue-markdown-editor'
 export default {
   components: {
@@ -75,9 +76,9 @@ export default {
         auth: process.env.GRIDSOME_GITHUB_KB_ORCAFIT,
         dialog: false,
         valid: true,
-        title: '',
+        title: dayjs().format('YYYY-MM-DD') + ' - ',
         titleExists: false,
-        description: 'Overview',
+        description: '',
         body: `# Frequency
 E.g. Once daily
 ## Table
@@ -85,6 +86,8 @@ Exercise|Reps/Time|Sets|Notes
 --|--|--|--|
   |  |  |  |
   |  |  |  |
+  |  |  |  |  
+  |  |  |  |  
   |  |  |  |  
 `,
         titleRules: [
