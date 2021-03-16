@@ -77,7 +77,9 @@ export default {
     // MarkdownEditor: () =>
     //     import ('@voraciousdev/vue-markdown-editor')
     //       .catch(),
-    Editor
+    Editor: () =>
+      import ('@toast-ui/vue-editor')
+      .catch()
   },
     data: () => ({
         toastOptions: {
