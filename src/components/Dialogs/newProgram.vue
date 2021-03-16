@@ -52,7 +52,11 @@
         required
       />
     <ClientOnly>
-    <MarkdownEditor v-model="body" class="p-2"/>
+      <editor ref="editor" :initialValue="body" :options="toastOptions" initialEditType="markdown"
+      previewStyle="tab"
+      @change="onChange"
+      />
+    <!-- <MarkdownEditor v-model="body" class="p-2"/> -->
     </ClientOnly>
         </v-form>
         </v-card>
@@ -66,13 +70,39 @@ import {Octokit} from '@octokit/rest'
 import { Base64 } from 'js-base64'
 import dayjs from 'dayjs'
 // import MarkdownEditor from '@voraciousdev/vue-markdown-editor'
+import { Editor } from '@toast-ui/vue-editor'
+
 export default {
   components: {
-    MarkdownEditor: () =>
-        import ('@voraciousdev/vue-markdown-editor')
-          .catch(),
+    // MarkdownEditor: () =>
+    //     import ('@voraciousdev/vue-markdown-editor')
+    //       .catch(),
+    Editor
   },
     data: () => ({
+        toastOptions: {
+          usageStatistics: false,
+           toolbarItems: [
+            'heading',
+            'bold',
+            'italic',
+            'strike',
+            'divider',
+            'hr',
+            'quote',
+            'divider',
+            'ul',
+            'ol',
+            'task',
+            'indent',
+            'outdent',
+            'divider',
+            'table',
+            'image',
+            'link',
+            'divider',
+          ]
+        },
         auth: process.env.GRIDSOME_GITHUB_KB_ORCAFIT,
         dialog: false,
         valid: true,
@@ -113,6 +143,9 @@ ${this.body}
       }
     },
     methods: {
+      onChange (event) {
+        this.body = this.$refs.editor.invoke('getMarkdown')
+      },
       save () {
         let vueThis = this
         var cont = this.$refs.form.validate()
@@ -195,4 +228,8 @@ ${this.body}
 .btn {
   @apply bg-indigo-400;
 }
+</style>
+<style>
+@import '~codemirror/lib/codemirror.css';
+@import '~@toast-ui/editor/dist/toastui-editor.css';
 </style>
