@@ -198,13 +198,7 @@ ${this.body}
           //   author.name,
           //   author.email
           //       })
-          // var config = {
-          //   username: 'MarkGStacey',
-          //   password: 'L0pt@8192', // Either your password or an authentication token if two-factor authentication is enabled
-          //   auth: 'basic',
-          //   repository: 'kb.OrcaFit',
-          //   branchName: 'master'
-          // };
+
           // var github = new GitHub(config);
           // var repo = github.getRepo('MarkGStacey', 'kb.OrcaFit');
 
