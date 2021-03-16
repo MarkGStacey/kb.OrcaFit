@@ -16,6 +16,10 @@ import 'vuetify/dist/vuetify.min.css'
 // Import default layout so we don't need to import it to every page
 import DefaultLayout from '~/layouts/Default.vue'
 
+// if (process.isClient) {
+  // import { Editor } from '@toast-ui/vue-editor'
+  // import '@toast-ui/editor/dist/toastui-editor.css';
+// }
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 export default function (Vue, {appOptions,  router, head, isClient }) {
   head.link.push({
@@ -27,6 +31,10 @@ export default function (Vue, {appOptions,  router, head, isClient }) {
   Vue.use(Vuetify)
   appOptions.vuetify = new Vuetify({});
   // Set default layout as a global component
-  Vue.component('Layout', DefaultLayout)
+
+    Vue.component('Layout', DefaultLayout)
+    // if (process.isClient) {
+    //   Vue.component('editor', Editor)
+    // }
   // Vue.component('font-awesome', FontAwesomeIcon)
 }

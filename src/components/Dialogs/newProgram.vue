@@ -51,13 +51,13 @@
         label="Description"
         required
       />
-    <ClientOnly>
+    <client-only>
       <editor ref="editor" :initialValue="body" :options="toastOptions" initialEditType="markdown"
       previewStyle="tab"
       @change="onChange"
       />
     <!-- <MarkdownEditor v-model="body" class="p-2"/> -->
-    </ClientOnly>
+    </client-only>
         </v-form>
         </v-card>
       </v-dialog>
@@ -70,7 +70,7 @@ import {Octokit} from '@octokit/rest'
 import { Base64 } from 'js-base64'
 import dayjs from 'dayjs'
 // import MarkdownEditor from '@voraciousdev/vue-markdown-editor'
-import { Editor } from '@toast-ui/vue-editor'
+// import { Editor } from '@toast-ui/vue-editor'
 
 export default {
   components: {
@@ -79,7 +79,7 @@ export default {
     //       .catch(),
     Editor: () =>
       import ('@toast-ui/vue-editor')
-      .catch()
+    //   .catch()
   },
     data: () => ({
         toastOptions: {
