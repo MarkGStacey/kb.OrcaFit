@@ -56,6 +56,7 @@
       previewStyle="tab"
       @change="onChange"
       />
+      editor
     <!-- <MarkdownEditor v-model="body" class="p-2"/> -->
     </client-only>
         </v-form>
@@ -78,8 +79,12 @@ export default {
     //     import ('@voraciousdev/vue-markdown-editor')
     //       .catch(),
     Editor: () =>
-      import ('@toast-ui/vue-editor')
-    //   .catch()
+      import  ('@toast-ui/vue-editor')
+      .then(m => m.Editor)
+      .catch()
+      //  .catch( err => {
+      //    debugger
+      //  })
   },
     data: () => ({
         toastOptions: {
