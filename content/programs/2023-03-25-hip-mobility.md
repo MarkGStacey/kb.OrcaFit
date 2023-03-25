@@ -9,7 +9,7 @@ description: Hip mobility
 exercises: 
  - hip mobility
 ---
-Exercise|Reps/Time|Sets|Notes
+Exercise|Reps / Time|Sets|Notes
 --|--|--|--|
 Thoracic rotations|  10| 1 of 3 |  |  
 QL elbow rotations|10  | 1 of 3 |  |  
