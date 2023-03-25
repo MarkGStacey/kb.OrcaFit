@@ -19,7 +19,6 @@ Lunge clock| 3 all the way round | 1 of 3 |  clock means toe points|
  Kneeling hip CARs| 5 | 1 of 3 |  |  
  front foot elevated split squat with kettlebell |  |  |  |
  Split stance raised toes kettlebell deadlift |  |  |  |
- 
  Hanging leg raises | 10 | 3 | |
 Ball rollouts | 10 | 3 | |
 Deep squat stretch | 30 seconds | 3 | 1 of 3  |
