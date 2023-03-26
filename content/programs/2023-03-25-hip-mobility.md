@@ -23,5 +23,5 @@ Lunge clock| 3 all the way round | 1 of 3 |  clock means toe points|
 Ball rollouts | 10 | 3 | |
 Deep squat stretch | 30 seconds | 3 | 1 of 3  |
  Front hip lying stretch with band | 1 minute each side | 3 | 1 of 3 |
-  Hamstring stands | 10 | 3 | 1 of 3  |
- Box stretch | 1 minute each side | 3 |  |  
+  Hamstring sit/stands | 10 | 3 | 1 of 3 - hands under feet  |
+ Box pigeon stretch | 1 minute each side | 3 | box about 1m high |  
