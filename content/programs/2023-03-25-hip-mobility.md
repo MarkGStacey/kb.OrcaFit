@@ -11,8 +11,8 @@ exercises:
 ---
 Exercise|Reps / Time|Sets|Notes
 --|--|--|--|
-Thoracic rotations|  10| 1 of 3 |  |  
-QL elbow rotations|10  | 1 of 3 |  |  
+Open book Thoracic rotations|  10| 1 of 3 |  |  
+QL/elbow Thoracic rotations|10  | 1 of 3 |  |  
  Leg windscreen wiper holds |10  | 1 of 3 |  cycle 3 times|  
  Cat cow | 10 | 1 of 3 |  |  
 Lunge clock| 3 all the way round | 1 of 3 |  clock means toe points| 
