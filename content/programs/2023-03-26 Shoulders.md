@@ -22,4 +22,5 @@ Prone horizontal abduction with external rotation| 6|3 of 3 ||
   Face pulls on cable machine |  | 1 of 3  |   |  
   Plank pull on cable machine |  |  2 of 3 |   |
  Internal Rotation High | | 3 of 3 | |
-Dips |  to failure |   |   |  
+Dips |  to failure |  1 of 2 |   |  
+Scaption shrugs|10| 2 of 2||
