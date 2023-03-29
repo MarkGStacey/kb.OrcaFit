@@ -17,10 +17,9 @@ QL/elbow Thoracic rotations|10  | 2 of 3 |  |
  Cat cow | 10 | 1 of 3 |  |  
 Lunge clock| 3 all the way round | 2 of 3 |  clock means toe points| 
  Kneeling hip CARs| 5 | 3 of 3 |  |  
-| Full reverse bridge | 30 seconds or longer | 1 of 3| |
-| Half bridge | 10 | 2 of 3| |
-| Full bridge into bear reach | 5 | 3 of 3| |
-
+ Full reverse bridge | 30 seconds or longer | 1 of 3| |
+ Half bridge | 10 | 2 of 3| |
+Full bridge into bear reach | 5 | 3 of 3| |
  front foot elevated split squat with kettlebell |  |  |  |
  Split stance raised toes kettlebell deadlift |  |  |  |
  Hanging leg raises | 10 | 3 | |
