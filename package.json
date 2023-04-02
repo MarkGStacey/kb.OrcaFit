@@ -2,27 +2,23 @@
   "name": "netlifycms-gridsome",
   "private": true,
   "scripts": {
-    "build": "gridsome build",
-    "develop": "gridsome develop",
-    "explore": "gridsome explore"
+    "build": "NODE_OPTIONS=--openssl-legacy-provider && gridsome build",
+    "develop": "NODE_OPTIONS=--openssl-legacy-provider && gridsome develop",
+    "explore": "NODE_OPTIONS=--openssl-legacy-provider && gridsome explore"
   },
   "dependencies": {
-    "@gridsome/plugin-google-analytics": "^0.1.0",
     "@gridsome/remark-prismjs": "^0.3.0",
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.4",
-    "@octokit/rest": "^18.3.4",
     "@toast-ui/vue-editor": "^2.5.1",
-    "@voraciousdev/vue-markdown-editor": "^0.3.0",
     "dayjs": "^1.10.4",
     "gridsome": "^0.7.23",
-    "gridsome-plugin-flexsearch": "^1.0.5",
+    "vue-server-renderer": "^2.6.11",
     "gridsome-source-github-api": "^0.2.0",
     "js-base64": "^3.6.0",
     "postcss-import": "^14.0.0",
-    "stackedit-js": "^1.0.7",
     "tailwindcss": "^2.0.1-compat",
-    "vuetify": "^2.2.14"
+    "vuetify": "^2.3.0"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
