@@ -131,7 +131,7 @@ module.exports = {
       }
     },
     {
-      // Create workoutw from markdown files
+      // Create workouts from markdown files
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'Workout',
