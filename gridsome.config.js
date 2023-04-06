@@ -131,6 +131,21 @@ module.exports = {
       }
     },
     {
+      // Create workouts from markdown files
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Workout',
+        path: 'content/workouts/*.md',
+        refs: {
+          // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
+          tags: {
+            typeName: 'Tag',
+            create: true
+          }
+        }
+      }
+    },
+    {
       use: 'gridsome-plugin-flexsearch',
       options: {
         searchFields: ['title', 'tags'],
