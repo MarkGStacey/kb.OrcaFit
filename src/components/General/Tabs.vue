@@ -8,7 +8,7 @@
         <g-link :to="'/'">Posts</g-link>
         </v-tab>
       <v-tab href="programs"><g-link :to="'Programs'">Programs</g-link></v-tab>
-      <v-tab href="workouts"><g-link :to="'Programs'">Workouts</g-link></v-tab>
+      <v-tab href="workouts"><g-link :to="'Workouts'">Workouts</g-link></v-tab>
       <!-- <v-tab href="search-posts"><g-link :to="'search-posts'">SearchPosts</g-link></v-tab> -->
     </v-tabs>
 </div>
