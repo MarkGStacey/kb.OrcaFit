@@ -7,6 +7,7 @@ tags:
 - exercises
 author: mgs
 description: Adductor band exercise
+cover_image: /images/uploads/sun-3713835_1920.jpg
 equipment:
 - bands
 bodyparts:
