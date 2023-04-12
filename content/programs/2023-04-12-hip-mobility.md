@@ -23,8 +23,9 @@ Full bridge into bear reach | 5 | 3 of 3| |
  front foot elevated split squat with kettlebell |  |  |  |
  Split stance raised toes kettlebell deadlift |  |  |  |
  Hanging leg raises | 10 | 3 | |
-Ball rollouts | 10 | 3 | 1 of 2|
-Deadbugs | 10 | 3 | 2 of 2 |
+Ball rollouts | 10 | 1 of 3 | |
+Deadbugs | 10 | 2 of 3 | |
+IR stretch over opposite leg | 30 seconds a side | 3 of 3 ||
 Deep squat stretch | 30 seconds | 3 | 1 of 3  |
  Front hip lying stretch with band | 1 minute each side | 3 | 2 of 3 |
   Hamstring sit/stands | 10 | 3 | 3 of 3 - hands under feet  |
