@@ -22,7 +22,7 @@ Frog stretch with flick| 10 | 3 of 3 |  |
  Split stance raised toes kettlebell deadlift |  |  |  |
  Hanging leg raises | 10 | 3 | |
 Ball rollouts | 10 | 3 | |
-T | 30 seconds | 3 | 1 of 3  |
+Crossed leg glute stretch | 30 seconds | 3 | 1 of 3  |
  Front hip lying stretch with band | 1 minute each side | 3 | 1 of 3 |
   Hamstring sit/stands | 10 | 3 | 1 of 3 - hands under feet  |
  Box pigeon stretch | 1 minute each side | 3 | box about 1m high |  
