@@ -115,9 +115,8 @@ export default {
         title: dayjs().format('YYYY-MM-DD') + ' - ',
         titleExists: false,
         description: '',
-        body: `# Frequency
-E.g. Once daily
-## Table
+        body: `
+### Workout
 Exercise|Reps/Time|Sets|Notes
 --|--|--|--|
   |  |  |  |
@@ -152,7 +151,9 @@ ${this.body}
       onChange (event) {
         this.body = this.$refs.editor.invoke('getMarkdown')
       },
-      save () {
+      save (e) {
+        console.log('Saving')
+        debugger
         let vueThis = this
         var cont = this.$refs.form.validate()
         console.log(this.template)
@@ -168,7 +169,7 @@ ${this.body}
               warn: console.warn,
               error: console.error
             }})
-            data = octokit.repos.createOrUpdateFileContents({
+            /*data = */octokit.repos.createOrUpdateFileContents({
               owner: 'MarkGStacey',
               repo: 'kb.OrcaFit',
               path: 'content/workouts/' + '' + this.title.replace(/\s+/g, '-').toLowerCase() + '.md',
