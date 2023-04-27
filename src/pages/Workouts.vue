@@ -7,7 +7,7 @@
      <Header/>
      <WorkoutHeader/>
     <div class="posts">
-      <PostCard v-for="edge in $page.workouts.edges" :key="edge.node.id" :post="edge.node"/>
+      <PostCard v-for="edge in $page.workouts.edges" :key="edge.node.date || edge.node.id" :post="edge.node"/>
       <Pager :info="$page.workouts.pageInfo"/>
     </div>
 
@@ -15,7 +15,7 @@
 </template>
 <page-query>
 query ($page: Int) {
-  workouts: allWorkout(perPage: 10, page: $page, sortBy: "title", order: DESC, filter: { published: { eq: true }})
+  workouts: allWorkout(perPage: 10, page: $page, sortBy: "date", order: DESC, filter: { published: { eq: true }})
      @paginate {
       pageInfo {
         totalPages
