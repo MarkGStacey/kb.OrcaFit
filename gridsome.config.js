@@ -46,6 +46,10 @@ module.exports = {
       path: '/programs/:title',
       component: './src/templates/Program.vue'
     }],
+    Workout: [{
+      path: '/workouts/:title',
+      component: './src/templates/Workout.vue'
+    }],
     // Program: [{
     //   path: '/programs/:id',
     //   component: './src/templates/Program.vue'
