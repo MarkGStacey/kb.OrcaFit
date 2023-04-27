@@ -1,7 +1,8 @@
 <template>
   <Layout>
     <div class="post-title">
-      
+      <Tabs/>
+      Tags
       <h1 class="post-title__text text-gray-900">
         {{ $page.post.title }}
       </h1>
@@ -38,6 +39,7 @@
 import PostMeta from '~/components/PostMeta'
 import PostTags from '~/components/PostTags'
 import Author from '~/components/Author.vue'
+import Tabs from '~/components/General/Tabs.vue'
 // import search from '~/components/General/Search'
 
 
@@ -45,7 +47,8 @@ export default {
   components: {
     Author,
     PostMeta,
-    PostTags
+    PostTags,
+    Tabs
   },
   data: () => ({
     baseUrl: process.env.GRIDSOME_CONTENT_BASEURL
