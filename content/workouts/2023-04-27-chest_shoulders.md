@@ -27,5 +27,4 @@ Dips |  to failure |  1 of 2 |   |
 Scaption shrugs|10| 2 of 2||
  Rotator cuff T-stretch external rotation   | 30 seconds |  1 of 2 |   |
  Rotator cuff side lying front internal rotation   | 30 seconds |  2 of 2|   |
-
  Side lying rotator cuff  | 6 |  3 of 3 |   |
