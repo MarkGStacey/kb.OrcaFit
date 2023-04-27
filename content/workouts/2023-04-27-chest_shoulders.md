@@ -8,7 +8,8 @@ tags:
 # 2023-04-27-Chest_Shoulders
 ## Description
 Strength plus rotator cuff
-
+## Time
+About 2 hours
 ### Workout
 Exercise|Reps/Time|Sets|Notes
 --|--|--|--|
