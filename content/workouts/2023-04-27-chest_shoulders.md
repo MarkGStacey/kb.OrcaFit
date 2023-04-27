@@ -19,12 +19,13 @@ Arnie press | 6 | 3 + warmup  |   |
   1 arm assisted pullups | 10 | 4 | |  
  Ys, Ts, Ws  | 10  |  1 of 2|   |
  Lying incline row  | 6 | 2 of 2 |   |  
-  Plank pull on cable machine |  |  1 of 4 |   |
- Internal Rotation High | | 3 of 4 | |
-  External Rotation High | | 3 of 4 | |
-  External Rotation Side | | 4 of 4 | |
+ Internal Rotation High |6 | 1 of 2 | |
+  External Rotation High |6 | 2 of 2 | |
+   Plank pull on cable machine | 6 |  1 of 3 |   |
+   Sword pull cable | 6 |  2 of 3 |   |
+  External Rotation Side |6 | 3 of 3 | Try seated to not move cable?|
 Dips |  to failure |  1 of 2 |   |  
 Scaption shrugs|10| 2 of 2||
  Rotator cuff T-stretch external rotation   | 30 seconds |  1 of 2 |   |
- Rotator cuff side lying front internal rotation   | 30 seconds |  2 of 2|   |
- Side lying rotator cuff  | 6 |  3 of 3 |   |
+ Rotator cuff side lying front internal rotation stretch  | 30 seconds |  2 of 2|   |
+
