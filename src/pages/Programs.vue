@@ -7,7 +7,7 @@
      <Header/>
      <ProgramHeader/>
     <div class="posts">
-      <PostCard v-for="edge in $page.programs.edges" :key="edge.node.id" :post="edge.node"/>
+      <PostCard v-for="edge in $page.programs.edges" :key="i" :post="edge.node"/>
       <Pager :info="$page.programs.pageInfo"/>
     </div>
 
@@ -15,7 +15,7 @@
 </template>
 <page-query>
 query ($page: Int) {
-  programs: allProgram(perPage: 10, page: $page, sortBy: "title", order: DESC, filter: { published: { eq: true }})
+  programs: allProgram(perPage: 10, page: $page, sortBy: "date", order: DESC, filter: { published: { eq: true }})
      @paginate {
       pageInfo {
         totalPages
