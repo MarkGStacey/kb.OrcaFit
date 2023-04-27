@@ -28,4 +28,6 @@ Dips |  to failure |  1 of 2 |   |
 Scaption shrugs|10| 2 of 2||
  Rotator cuff T-stretch external rotation   | 30 seconds |  1 of 2 |   |
  Rotator cuff side lying front internal rotation stretch  | 30 seconds |  2 of 2|   |
-
+ Brachioradialis behind stretch  | 30 seconds |  1 of 3 |   |
+Forearm kneeling matrix stretch  | 30 seconds each side |  2 of 3|   |
+Seated elbow onto brachioradialis, from COE to wrist | 10 each side |  3 of 3|   |
