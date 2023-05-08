@@ -7,7 +7,7 @@
      <Header/>
      <WorkoutHeader/>
     <div class="posts">
-      <PostCard v-for="edge in $page.workouts.edges" :key="i" :post="edge.node"/>
+      <PostCard v-for="edge in $page.workouts.edges" :key="edge.node.id" :post="edge.node"/>
       <Pager :info="$page.workouts.pageInfo"/>
     </div>
 

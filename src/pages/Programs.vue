@@ -7,7 +7,7 @@
      <Header/>
      <ProgramHeader/>
     <div class="posts">
-      <PostCard v-for="edge in $page.programs.edges" :key="i" :post="edge.node"/>
+      <PostCard v-for="edge in $page.programs.edges" :key="edge.node.id" :post="edge.node"/>
       <Pager :info="$page.programs.pageInfo"/>
     </div>
 

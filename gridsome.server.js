@@ -4,9 +4,62 @@
 
 // Changes here requires a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
-
+const axios = require('axios')
 module.exports = function (api) {
-  api.loadSource(({ addCollection }) => {
+  api.loadSource(async (actions) => {
     // Use the Data store API here: https://gridsome.org/docs/data-store-api/
+    const options =  {
+      typeName: "Research",
+      tag: 'orca',
+      CONSUMER_KEY: process.env.CONSUMER_KEY,
+      ACCESS_TOKEN: process.env.ACCESS_TOKEN,
+      CODE: process.env.CODE
+    }
+    // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
+    const collection = actions.addCollection({
+      typeName: options.typeName || options.tag || 'PocketItems'
+    })
+
+    // // // Get the consumer keys and tokens from the options
+    // // const credentials = options.credentials || []
+
+    // Get the tag to filter by from the options
+    const tag = options.tag
+
+    /*const authResponse = await axios.post('https://getpocket.com/v3/oauth/authorize', {
+        consumer_key: options.CONSUMER_KEY,
+        code: options.CODE
+      }, {
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+          'X-Accept': 'application/x-www-form-urlencoded'
+        }
+      });*/
+       const response = await axios.post('https://getpocket.com/v3/get', {
+         consumer_key:  options.CONSUMER_KEY,
+         access_token: options.ACCESS_TOKEN,
+         tag: tag,
+         detailType: "complete"
+       },
+       {
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+            'X-Accept': 'application/x-www-form-urlencoded'
+          }
+        })
+
+      // // Loop through the response data and add each item to the collection
+      for (let key in response.data.list) {
+        const item = response.data.list[key]
+        collection.addNode({
+          id: item.item_id,
+          title: ((item.resolved_title == "" ? item.given_title : item.resolved_title) || "").slice(0,100),
+          date: new Date(item.time_added * 1000),
+          path: item.resolved_url || "",
+          preview_image: item.top_image_url,
+          // Index all of GetPocket's fields
+          ...item
+        })
+      }
   })
 }
