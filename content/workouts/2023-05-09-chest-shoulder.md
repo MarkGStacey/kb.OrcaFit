@@ -18,11 +18,10 @@ Arnie press | 6 | 3 + warmup  |   |
   flyes |  6 |  1 of 2 |   |  
  Triceps extension, knee on back reversed| 6 |  2 of 2 |   |
  Ys, Ts, Ws  | 10  |  3 sets|   |
- Internal Rotation High |6 | 1 of 3 | |
-  External Rotation High |6 | 2 of 3 | |
+ Halo |6 | 1 of 3 | |
+  Front raise to crucifix dumbbell |6 | 2 of 3 | |
    Plank pull on cable machine | 6 |  1 of 3 |   |
    Sword pull cable | 6 |  2 of 3 |   |
-  External Rotation Side |6 | 3 of 3 | |
 Dips |  to failure |  1 of 3 |   |  
 Scaption shrugs|10| 2 of 3||
  Brachioradialis behind stretch  | 30 seconds |  1 of 3 |   |
