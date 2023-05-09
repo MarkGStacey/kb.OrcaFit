@@ -118,7 +118,7 @@ export default {
         title: dayjs().format('YYYY-MM-DD') + ' - ',
         titleExists: false,
         description: '',
-        body: (mdbody || ''),
+        body: (this.mdbody || ''),
         titleRules: [
         v => !!v || 'Title is required',
         v => (v && v.length <= 100) || 'Name must be less than 100 characters',2

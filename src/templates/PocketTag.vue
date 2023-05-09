@@ -3,8 +3,8 @@
     <v-container>
       <Header/>
       <div class="d-flex-row d-block flex-wrap d-sm-inline-flex">
-        <!-- <ResearchTags @tagclick="filterPosts"/> -->
-        <!-- <PocketCards/> -->
+        <ResearchTags @tagclick="filterPosts"/>
+        <PocketCards/>
       </div>
       <div class="text-center">
         <Pager
@@ -45,15 +45,15 @@ research: allResearch (sortBy: "date", order: DESC filter: { pocketTags: {contai
 import { Pager } from "gridsome";
 import Header from '~/components/General/Header.vue'
 import ResearchTags from '~/components/ResearchTags.vue'
-// import PocketCards from '~/components/PocketCards.vue'
+import PocketCards from '~/components/PocketCards.vue'
 
 export default {
   components: {
     Pager,
     Header,
-  },/*,
     ResearchTags,
-    PocketCards*/
+    PocketCards
+  },
   methods: {
     filterPosts(tagName) {
 
