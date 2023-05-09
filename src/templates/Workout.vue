@@ -18,7 +18,7 @@
         <!-- <g-link :to="baseUrl + 'workouts/' + $page.post.path.replace('workouts', '').replace(/\\|\//g,'') +'.md'">
           <v-icon>mdi-content-duplicate</v-icon>Copy
         </g-link> -->
-        <CopyWorkout btntitle="Copy Workout" mdbody=""/>
+        <!-- <CopyWorkout btntitle="Copy Workout" mdbody=""/> -->
       </div>
 
       <div class="post__content prose prose-sm" v-html="$page.post.content" />
@@ -42,7 +42,7 @@ import PostTags from '~/components/PostTags'
 import Author from '~/components/Author.vue'
 import Tabs from '~/components/General/Tabs.vue'
 // import EditWorkout from '~/components/Dialogs/editWorkout.vue'
-import CopyWorkout from '~/components/Dialogs/editWorkout.vue'
+// import CopyWorkout from '~/components/Dialogs/editWorkout.vue'
 
 export default {
   components: {
@@ -51,7 +51,7 @@ export default {
     PostTags,
     Tabs,
     // EditWorkout,
-    CopyWorkout
+    // CopyWorkout
   },
   data: () => ({
     baseUrl: process.env.GRIDSOME_CONTENT_BASEURL

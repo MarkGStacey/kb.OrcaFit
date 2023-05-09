@@ -121,7 +121,8 @@ export default {
         body: (mdbody || ''),
         titleRules: [
         v => !!v || 'Title is required',
-        v => (v && v.length <= 100) || 'Name must be less than 100 characters',
+        v => (v && v.length <= 100) || 'Name must be less than 100 characters',2
+        
         // v => titleExists || 'Title exists already',
         ]
     }),
