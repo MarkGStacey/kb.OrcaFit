@@ -16,7 +16,7 @@ Exercise|Reps/Time|Sets|Notes
 DB press  | 6 | 3 + warmup  |   |  
 Arnie press | 6 | 3 + warmup  |   |  
   flyes |  6 |  1 of 2 |   |  
- Triceps extension | 6 |  2 of 2 |   |
+ Triceps extension, knee on back reversed| 6 |  2 of 2 |   |
  Ys, Ts, Ws  | 10  |  3 sets|   |
  Internal Rotation High |6 | 1 of 3 | |
   External Rotation High |6 | 2 of 3 | |
