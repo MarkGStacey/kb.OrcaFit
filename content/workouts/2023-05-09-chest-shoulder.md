@@ -5,7 +5,7 @@ published: true
 title: 2023-05-09-Chest-Shoulders
 tags: 
 ---
-
+## 2023-05-09-Chest-Shoulders
 ## Description
 Strength plus rotator cuff
 ## Time
