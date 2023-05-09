@@ -19,9 +19,9 @@ module.exports = function (api) {
       typeName: "Research" || options.tag || 'PocketItems'
     })
 
-    // const tagsCollection = actions.addCollection({
-    //   typeName: 'PocketTags' || options.tag || 'PocketTags'
-    // })
+    const tagsCollection = actions.addCollection({
+      typeName: 'PocketTags' || options.tag || 'PocketTags'
+    })
     // // // Get the consumer keys and tokens from the options
     // // const credentials = options.credentials || []
 
@@ -71,13 +71,13 @@ module.exports = function (api) {
         })
         //          researchTags: (item) => {return item.tags.flat()},
       }
-      // let uniqueTags = [...new Set(pocketTags)];
-      // for (let key in uniqueTags) {
-      //   tagsCollection.addNode({
-      //     title: uniqueTags[key] || "Missing",
-      //     name: uniqueTags[key] || "Missing",
-      //     ...tag
-      //   })
-      // }
+      let uniqueTags = [...new Set(pocketTags)];
+      for (let key in uniqueTags) {
+        tagsCollection.addNode({
+          title: uniqueTags[key] || "Missing",
+          name: uniqueTags[key] || "Missing",
+          ...tag
+        })
+      }
   })
 }
