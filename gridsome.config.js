@@ -37,7 +37,12 @@ const collections = [
 module.exports = {
   siteName: 'Orca Fit Exercise Knowledge Base',
   siteDescription: 'A resource for building rehab as well as strength & conditioning programs',
-
+/*
+,
+    PocketTags: [{
+      path: '/pockettags/:title',
+      component: './src/templates/PocketTag'
+    }]*/
   templates: {
     Post: '/:title',
     Tag: '/tag/:id',
@@ -49,7 +54,7 @@ module.exports = {
     Workout: [{
       path: '/workouts/:title',
       component: './src/templates/Workout.vue'
-    }],
+    }]
     // Program: [{
     //   path: '/programs/:id',
     //   component: './src/templates/Program.vue'

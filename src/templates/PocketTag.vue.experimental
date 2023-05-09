@@ -4,7 +4,7 @@
       <Header/>
       <div class="d-flex-row d-block flex-wrap d-sm-inline-flex">
         <!-- <ResearchTags @tagclick="filterPosts"/> -->
-       <!-- <PocketCards/> -->
+        <!-- <PocketCards/> -->
       </div>
       <div class="text-center">
         <Pager
@@ -17,37 +17,34 @@
 </template>
 
 <page-query>
-query AllResearch ( $page: Int) {
-  tag: __type (name: "Research_Tags") {  
-			fields {
-        name
-      }
+query AllResearch ($id: ID!) {
+
+research: allResearch (sortBy: "date", order: DESC filter: { pocketTags: {contains: [$id: ID!]} }),  @paginate {
+  pageInfo {
+    totalPages
+    currentPage
   }
-	research: allResearch (sortBy: "date", order: DESC, perPage: 50, page: $page, filter: { }) @paginate {
-    pageInfo {
-      totalPages
-      currentPage
-    }
-    edges {
-      node {
-        id
-        title
-        path
-        has_image
-        preview_image
-        date (format: "MMMM D, YYYY")
-        excerpt
-      }
+  
+  edges {
+    node {
+      id
+      title
+      path
+      has_image
+      preview_image
+      date (format: "MMMM D, YYYY")
+      excerpt,
+      pocketTags
     }
   }
- 
+}
 }
 </page-query>
 
 <script>
 import { Pager } from "gridsome";
 import Header from '~/components/General/Header.vue'
-// import ResearchTags from '~/components/ResearchTags.vue'
+import ResearchTags from '~/components/ResearchTags.vue'
 // import PocketCards from '~/components/PocketCards.vue'
 
 export default {

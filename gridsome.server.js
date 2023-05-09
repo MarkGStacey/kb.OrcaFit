@@ -9,7 +9,6 @@ module.exports = function (api) {
   api.loadSource(async (actions) => {
     // Use the Data store API here: https://gridsome.org/docs/data-store-api/
     const options =  {
-      typeName: "Research",
       tag: 'orca',
       CONSUMER_KEY: process.env.CONSUMER_KEY,
       ACCESS_TOKEN: process.env.ACCESS_TOKEN,
@@ -17,9 +16,12 @@ module.exports = function (api) {
     }
     // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
     const collection = actions.addCollection({
-      typeName: options.typeName || options.tag || 'PocketItems'
+      typeName: "Research" || options.tag || 'PocketItems'
     })
 
+    // const tagsCollection = actions.addCollection({
+    //   typeName: 'PocketTags' || options.tag || 'PocketTags'
+    // })
     // // // Get the consumer keys and tokens from the options
     // // const credentials = options.credentials || []
 
@@ -48,18 +50,34 @@ module.exports = function (api) {
           }
         })
 
+      var pocketTags = new Array()
       // // Loop through the response data and add each item to the collection
       for (let key in response.data.list) {
         const item = response.data.list[key]
+        var itemTags = new Array()
+        for(let pocketTag in item.tags) {
+          pocketTags.push("" + pocketTag)
+          itemTags.push("" + pocketTag)
+        }
         collection.addNode({
           id: item.item_id,
           title: ((item.resolved_title == "" ? item.given_title : item.resolved_title) || "").slice(0,100),
           date: new Date(item.time_added * 1000),
           path: item.resolved_url || "",
           preview_image: item.top_image_url,
+          pocketTags: itemTags,
           // Index all of GetPocket's fields
           ...item
         })
+        //          researchTags: (item) => {return item.tags.flat()},
       }
+      // let uniqueTags = [...new Set(pocketTags)];
+      // for (let key in uniqueTags) {
+      //   tagsCollection.addNode({
+      //     title: uniqueTags[key] || "Missing",
+      //     name: uniqueTags[key] || "Missing",
+      //     ...tag
+      //   })
+      // }
   })
 }
