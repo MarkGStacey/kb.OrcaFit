@@ -9,7 +9,7 @@
      </div>
     <br/>
     <div class="posts">
-      <PostCard v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node"/>
+      <PostCard v-for="edge in $page.posts.edges" :key="i" :post="edge.node"/>
       <Pager :info="$page.posts.pageInfo"/>
       
     </div>

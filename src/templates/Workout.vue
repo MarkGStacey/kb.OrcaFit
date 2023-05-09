@@ -8,12 +8,17 @@
         <g-link :to="baseUrl + 'workouts/' + $page.post.path.replace('workouts', '').replace(/\\|\//g,'') +'.md'">
           <v-icon>mdi-pencil</v-icon>Edit
         </g-link>
+
       <PostMeta :post="$page.post" />
     </div>
 
     <div class="post content-box">
       <div class="post__header">
         <g-image alt="Cover image" v-if="$page.post.cover_image" :src="$page.post.cover_image" />
+        <!-- <g-link :to="baseUrl + 'workouts/' + $page.post.path.replace('workouts', '').replace(/\\|\//g,'') +'.md'">
+          <v-icon>mdi-content-duplicate</v-icon>Copy
+        </g-link> -->
+        <CopyWorkout btntitle="Copy Workout" mdbody=""/>
       </div>
 
       <div class="post__content prose prose-sm" v-html="$page.post.content" />
@@ -36,14 +41,17 @@ import PostMeta from '~/components/PostMeta'
 import PostTags from '~/components/PostTags'
 import Author from '~/components/Author.vue'
 import Tabs from '~/components/General/Tabs.vue'
-
+// import EditWorkout from '~/components/Dialogs/editWorkout.vue'
+import CopyWorkout from '~/components/Dialogs/editWorkout.vue'
 
 export default {
   components: {
     Author,
     PostMeta,
     PostTags,
-    Tabs
+    Tabs,
+    // EditWorkout,
+    CopyWorkout
   },
   data: () => ({
     baseUrl: process.env.GRIDSOME_CONTENT_BASEURL

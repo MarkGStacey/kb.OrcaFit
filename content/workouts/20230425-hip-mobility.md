@@ -6,7 +6,7 @@ summary:
 tags:
 author: mgs
 description: Hip mobility
-cover_image: /images/uploads/sun-3713835_1920.jpg
+cover_image:
 exercises: 
  - hip mobility
 ---
