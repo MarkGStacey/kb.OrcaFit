@@ -1,0 +1,28 @@
+---
+title: 2023-05-11 Legs Github
+date: 2023-05-11T00:00:00.000Z
+published: true
+summary: 
+tags:
+author: mgs
+description: 
+cover_image: /images/uploads/MarkS_hip_mobility_3b795100-d68f-4608-bd78-7019354dbe60.png
+exercises: 
+ - hip mobility
+---
+Exercise|Reps / Time|Sets|Notes
+--|--|--|--|
+Lunge matrix|  10| 1 of 3 | Warm-up 5 points, weight vest 3 |  
+Open book Thoracic rotations|  10| 1 of 3 |  |  
+QL/full back release|4 x 10 second hold each side  | 2 of 3 |  |  
+ Cat cow | 10 | 3 of 3 |  |  
+ Kneeling hip CARs| 5 | 1 of 3 |  |  
+90/90 hip lift leg extensions| 5 | 2 of 3 |  back and front legs each for a full set|  
+Frog stretch with flick| 10 total | 3 of 3 |  |
+Crossed single leg squat| 10 | 1 of 3 |  |  
+Kneeling kettlebell overhead and dip| 10 | 2 of 3 |  |  
+Hanging leg raises | 10 | 3 | |
+Ball rollouts | 10 | 3 | |
+Crossed leg glute stretch to chest | 30 seconds | 1 of 3 | 1 of 3  |
+ TFL stretch and ankle flex combined | 1 minute each side | 2 of 3 | Lean weight on ankle, and point toes of back leg in|
+  Hamstring sit/stands | 10 | 3 of 3 | hands under feet  |
