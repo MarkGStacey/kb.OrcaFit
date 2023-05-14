@@ -1,5 +1,5 @@
 ---
-date:
+date: 2023-05-14
 author: mgs
 published: true
 title: 2023-05-14-Chest_Shoulders
