@@ -30,6 +30,7 @@ Arnie press | 6 | 3 + warmup  |   |
  Internal Rotation High |6 | 1 of 2 | |
   External Rotation High |6 | 2 of 2 | |
    sword draw | 6 |  1 of 2|   |
+   band stretch over chest| 50 |  1 of 2|   |
 Brachioradialis behind stretch  | 30 seconds |  1 of 3 |   |
 Forearm kneeling matrix stretch  | 30 seconds each side |  2 of 3|   |
 Seated elbow onto brachioradialis, from COE to wrist | 10 each side |  3 of 3||
