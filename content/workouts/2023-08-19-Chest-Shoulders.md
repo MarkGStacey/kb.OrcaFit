@@ -26,7 +26,8 @@ Arnie press | 6 | 3 + warmup  |   |
  Lying barbell row | 6 | 2 of 3 | |
  Halo | 6 | 1 of 2|   |  
  front raise, crucifix |  6 |  2 of 2 |   |
- lying duel triceps extension| 6 | 1 of 2|   |  
+ lying dual triceps extension| 6 | 1 of 2|   |  
+pushup retraction and depression| 6 | 2 of 2|   |   
  Internal Rotation High |6 | 1 of 2 | |
   External Rotation High |6 | 2 of 2 | |
    sword draw | 6 |  1 of 2|   |
