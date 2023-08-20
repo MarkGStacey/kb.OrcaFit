@@ -25,6 +25,6 @@ Kneeling hip CARs| 5 | 1 of 3 |  |
 Frog stretch with flick| 10 total | 3 of 3 |  |
 Crossed single leg squat| 10 | 1 of 3 |  | 
 Hamstring sit/stands | 10 | 2 of 3 | hands under feet  |
-Quad wall stretch | 1 min | 3 of 3 | hands under feet  |
+Quad wall stretch | 1 min | 3 of 3 |   |
 Hanging leg raises | 10 | 3 | |
 Ball rollouts | 10 | 3 | |
