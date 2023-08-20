@@ -17,7 +17,7 @@ open book Thoracic rotations|  10| 1 of 3 |  |
 QL/full back release|4 x 10 second hold each side  | 2 of 3 |  |  
 Windscreen wipers |  10| 3 of 3 |  |
 Kneeling kettlebell overhead and dip and press| 5 | 1 of 3 | aiming for elbow on floor |  
-hip airplanes| 5 each side | 2 of 3 |  physio fix |  
+hip airplanes| 5 each side | 2 of 3 | https://www.instagram.com/p/CuPgal6Mdk4/?igshid=MzRlODBiNWFlZA== |  
 Standing kettlebell overhead and dip and hold| 5 | 2 of 3 | aiming for hand on floor |  
 Lunge matrix|  10|  3 | Warm-up 5 points, dumbbells 3 |  
 Kneeling hip CARs| 5 | 1 of 3 |  |  
