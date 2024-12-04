@@ -31,7 +31,7 @@
     "@fullhuman/postcss-purgecss": "^4.0.0",
     "@mdi/font": "^5.9.55",
     "@tailwindcss/typography": "^0.4.0",
-    "node-sass": "^5.0.0",
+    "node-sass": "^7.0.0",
     "postcss-preset-env": "^6.7.0",
     "sass-loader": "^10.1.1"
   }
